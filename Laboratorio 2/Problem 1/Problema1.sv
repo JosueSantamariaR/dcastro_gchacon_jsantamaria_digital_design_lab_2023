@@ -3,21 +3,22 @@ module Problema1(input logic a,b,c,d,
 
 logic e,f,g,h,i,j;
 
+//Conversión de binario a BCD (digitos del 0 al 9)
 assign e = d;
 assign f = (~a & c)||(a & b & ~c);
 assign g = (~a || c) & b;
 assign h = a & ~b & ~c;
 
+//Conversión de binario a BCD para casos cuando el numero binario es mayor a 9
 assign i = (c || b) & a;
-
-//For the 1 in the display
 assign j = e;
 
-//orden h   g   f   j
-		//0   0   0   0
-		//A3  A2  A1  A0
+
+//=rden de bits h   g   f   j
+//		          A3  A2  A1  A0
 		
-//MULTISIM hex0 bit más significativo
+
+//Asignación de las variables encargadas del display de 7 segmentos (Utilizando low logic)
 		
 assign hex0 = (~f & ~h & ((j & ~g)||(~j & g))); //j xor g
 

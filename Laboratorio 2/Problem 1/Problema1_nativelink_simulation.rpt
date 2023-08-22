@@ -18,6 +18,6 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim software
 Sourced NativeLink script d:/programing/quartus-app/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File Problema1_run_msim_rtl_verilog.do already exists - backing up current file as Problema1_run_msim_rtl_verilog.do.bak9
+Warning: File Problema1_run_msim_rtl_verilog.do already exists - backing up current file as Problema1_run_msim_rtl_verilog.do.bak10
 Info: Spawning ModelSim Simulation software 
 Info: NativeLink simulation flow was successful

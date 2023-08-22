@@ -1,5 +1,5 @@
-Analysis & Synthesis report for Problema1
-Mon Aug 21 14:30:10 2023
+Analysis & Elaboration report for Problema1
+Tue Aug 22 14:09:56 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -7,16 +7,10 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -40,31 +34,42 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Aug 21 14:30:10 2023          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name                   ; Problema1                                      ;
-; Top-level Entity Name           ; Problema1                                      ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 0                                              ;
-; Total pins                      ; 13                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Aug 22 14:09:56 2023          ;
+; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Revision Name                 ; Problema1                                      ;
+; Top-level Entity Name         ; Problema1                                      ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -150,143 +155,33 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                   ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------+---------+
-; Problema1.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/Quartus_Taller/Lab2/Problema_1/Problema1.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------+---------+
-
-
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimate of Logic utilization (ALMs needed) ; 4       ;
-;                                             ;         ;
-; Combinational ALUT usage for logic          ; 8       ;
-;     -- 7 input functions                    ; 0       ;
-;     -- 6 input functions                    ; 0       ;
-;     -- 5 input functions                    ; 0       ;
-;     -- 4 input functions                    ; 7       ;
-;     -- <=3 input functions                  ; 1       ;
-;                                             ;         ;
-; Dedicated logic registers                   ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 13      ;
-;                                             ;         ;
-; Total DSP Blocks                            ; 0       ;
-;                                             ;         ;
-; Maximum fan-out node                        ; a~input ;
-; Maximum fan-out                             ; 8       ;
-; Total fan-out                               ; 53      ;
-; Average fan-out                             ; 1.56    ;
-+---------------------------------------------+---------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Problema1                 ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |Problema1          ; Problema1   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 10                          ;
-;     normal            ; 10                          ;
-;         1 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 7                           ;
-; boundary_port         ; 13                          ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.57                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Mon Aug 21 14:30:01 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema1 -c Problema1
+    Info: Processing started: Tue Aug 22 14:09:46 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema1 -c Problema1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file problema1.sv
     Info (12023): Found entity 1: Problema1 File: D:/Quartus_Taller/Lab2/Problema_1/Problema1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file problema1_tb.sv
-    Info (12023): Found entity 1: Problema1_tb File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(3): created implicit net for "hex0" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(3): created implicit net for "hex1" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(3): created implicit net for "hex2" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(3): created implicit net for "hex3" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(3): created implicit net for "hex4" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(3): created implicit net for "hex5" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(3): created implicit net for "hex6" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(3): created implicit net for "hex00" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 3
+    Info (12023): Found entity 1: Problema1_tb File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(4): created implicit net for "hex0" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(4): created implicit net for "hex1" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(4): created implicit net for "hex2" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(4): created implicit net for "hex3" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(4): created implicit net for "hex4" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(4): created implicit net for "hex5" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(4): created implicit net for "hex6" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at Problema1_tb.sv(4): created implicit net for "hex00" File: D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv Line: 4
 Info (12127): Elaborating entity "Problema1" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 8 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4854 megabytes
-    Info: Processing ended: Mon Aug 21 14:30:10 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4777 megabytes
+    Info: Processing ended: Tue Aug 22 14:09:56 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:26
 
 
