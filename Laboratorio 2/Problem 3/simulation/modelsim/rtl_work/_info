@@ -1,0 +1,90 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/simulation/modelsim
+vcontador2_4_6_bits_tb
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1692720401
+!i10b 1
+!s100 EVmZ_zKz^Co^WfmMgFknd0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@cFddnXb<hXZ>Gj>eK19f2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1692718551
+8D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/contador2_4_6_bits_tb.sv
+FD:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/contador2_4_6_bits_tb.sv
+!i122 2
+L0 1 72
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1692720401.000000
+!s107 D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/contador2_4_6_bits_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of|D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/contador2_4_6_bits_tb.sv|
+!i113 1
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of
+Z10 tCvgOpt 0
+vcontadorNbits
+R1
+R2
+!i10b 1
+!s100 jiLWjWRJUi<[`CPM7OoMT3
+R3
+I?elM@[8lXjIET8KbD2[mQ3
+R4
+S1
+R0
+w1692720126
+8D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/contadorNbits.sv
+FD:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/contadorNbits.sv
+!i122 1
+L0 1 49
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/contadorNbits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of|D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/contadorNbits.sv|
+!i113 1
+R8
+R9
+R10
+ncontador@nbits
+vdisplay_converter
+R1
+R2
+!i10b 1
+!s100 l=i1k_dHgRU[1o=F_@[ek0
+R3
+Ib]g<n4:G;RSF<Jozh>B2f2
+R4
+S1
+R0
+R5
+8D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/display_converter.sv
+FD:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/display_converter.sv
+!i122 0
+L0 1 11
+R6
+r1
+!s85 0
+31
+!s108 1692720400.000000
+!s107 D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/display_converter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of|D:/Quartus_Taller/Lab2/Lab2_Exp3of/Lab2_Exp3of/display_converter.sv|
+!i113 1
+R8
+R9
+R10
