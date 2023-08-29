@@ -1,0 +1,65 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus_Taller/Lab2/Problema_1/simulation/modelsim
+vProblema1
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1692735171
+!i10b 1
+!s100 glRohk[j2c3o01>:84f9l1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I5>oXJ`Okf3[c;ZoJIj5z;1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1692734031
+8D:/Quartus_Taller/Lab2/Problema_1/Problema1.sv
+FD:/Quartus_Taller/Lab2/Problema_1/Problema1.sv
+!i122 0
+L0 1 41
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1692735171.000000
+!s107 D:/Quartus_Taller/Lab2/Problema_1/Problema1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Quartus_Taller/Lab2/Problema_1|D:/Quartus_Taller/Lab2/Problema_1/Problema1.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+D:/Quartus_Taller/Lab2/Problema_1
+Z9 tCvgOpt 0
+n@problema1
+vProblema1_tb
+R1
+R2
+!i10b 1
+!s100 QVSEO==n[WBE<ffhi=0]P3
+R3
+IzKTOHWPPXPn=jlCePX^0B2
+R4
+S1
+R0
+w1692734984
+8D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv
+FD:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv
+!i122 1
+L0 2 102
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/Quartus_Taller/Lab2/Problema_1|D:/Quartus_Taller/Lab2/Problema_1/Problema1_tb.sv|
+!i113 1
+R7
+R8
+R9
+n@problema1_tb
