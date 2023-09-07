@@ -32,8 +32,12 @@ module ALU_tb;
     );
 	 
 initial begin
-		a = 4'b1010;
-		b = 4'b1010;
+		a = 4'b1000;
+		b = 4'b0001;
+		select = 4'b0000;
+		#100;
+		a = 4'b1111;
+		b = 4'b0001;
 		select = 4'b0000;
 		#100;
 		
