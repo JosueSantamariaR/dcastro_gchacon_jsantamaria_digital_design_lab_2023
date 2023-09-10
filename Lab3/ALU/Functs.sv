@@ -31,3 +31,17 @@ module NOT_gate #( parameter N )
   assign out = ~a;
   
 endmodule
+
+//XOR_gate
+
+module XOR_gate #( parameter N )
+	(
+		input [N-1:0] a, b, 
+		output [N-1:0] out
+	);
+	
+  assign out = ( ~a & b ) | ( a & ~b );
+  
+endmodule
+
+
