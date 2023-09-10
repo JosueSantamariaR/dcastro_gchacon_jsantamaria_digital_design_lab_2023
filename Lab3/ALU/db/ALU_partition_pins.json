@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "oper[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oper[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oper[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oper[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_selector[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_selector[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_selector[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_selector[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "trigger",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
