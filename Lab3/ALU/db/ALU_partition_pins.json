@@ -4,6 +4,74 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "CarryOut",
+					"strict" : false
+				},
+				{
+					"name" : "Zero",
+					"strict" : false
+				},
+				{
+					"name" : "Negative",
+					"strict" : false
+				},
+				{
+					"name" : "display1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display2[6]",
+					"strict" : false
+				},
+				{
 					"name" : "oper[0]",
 					"strict" : false
 				},
@@ -36,19 +104,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "ALU_selector[0]",
+					"name" : "B[3]",
 					"strict" : false
 				},
 				{
-					"name" : "ALU_selector[1]",
+					"name" : "B[2]",
 					"strict" : false
 				},
 				{
-					"name" : "ALU_selector[2]",
-					"strict" : false
-				},
-				{
-					"name" : "ALU_selector[3]",
+					"name" : "B[1]",
 					"strict" : false
 				},
 				{
@@ -56,7 +120,35 @@
 					"strict" : false
 				},
 				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
 					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Sel[2]",
 					"strict" : false
 				},
 				{
@@ -65,30 +157,6 @@
 				},
 				{
 					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "B[3]",
-					"strict" : false
-				},
-				{
-					"name" : "A[3]",
 					"strict" : false
 				}
 			]

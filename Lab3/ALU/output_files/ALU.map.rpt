@@ -1,30 +1,30 @@
-Analysis & Synthesis report for ALU
-Sun Sep 10 14:14:57 2023
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Analysis & Elaboration report for ALU
+Mon Sep 11 20:28:50 2023
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
- 12. Parameter Settings for User Entity Instance: Mux:mux_1
- 13. Parameter Settings for User Entity Instance: AND_gate:andgate
- 14. Parameter Settings for User Entity Instance: OR_gate:orgate
- 15. Port Connectivity Checks: "Mux:mux_1"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
+  5. Parameter Settings for User Entity Instance: Multiplexor:mux_1
+  6. Parameter Settings for User Entity Instance: full_adder:adder
+  7. Parameter Settings for User Entity Instance: substractor:tractor
+  8. Parameter Settings for User Entity Instance: multiplier:multip
+  9. Parameter Settings for User Entity Instance: divider:divid
+ 10. Parameter Settings for User Entity Instance: mod:moder
+ 11. Parameter Settings for User Entity Instance: and_gate:agate
+ 12. Parameter Settings for User Entity Instance: or_gate:ogate
+ 13. Parameter Settings for User Entity Instance: xor_gate:xgate
+ 14. Analysis & Elaboration Settings
+ 15. Port Connectivity Checks: "shifting:shiftrght"
+ 16. Port Connectivity Checks: "shifting:shiftlft"
+ 17. Port Connectivity Checks: "full_adder:adder"
+ 18. Analysis & Elaboration Messages
+ 19. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -48,31 +48,142 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Sep 10 14:14:57 2023          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
-; Revision Name                   ; ALU                                            ;
-; Top-level Entity Name           ; ALU                                            ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 4                                              ;
-; Total pins                      ; 40                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Mon Sep 11 20:28:50 2023          ;
+; Quartus Prime Version         ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Revision Name                 ; ALU                                            ;
+; Top-level Entity Name         ; ALU                                            ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; M              ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Multiplexor:mux_1 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: full_adder:adder ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; N              ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: substractor:tractor ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multiplier:multip ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:divid ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 4     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mod:moder ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; N              ; 4     ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: and_gate:agate ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; N              ; 4     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: or_gate:ogate ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; N              ; 4     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: xor_gate:xgate ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; N              ; 4     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -158,284 +269,116 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
-+----------------------------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shifting:shiftrght"                                                                                                                                                                      ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; shifter     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; shifter[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
-; Opcode.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Opcode.sv    ;         ;
-; Mux.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv       ;         ;
-; Functs.sv                        ; yes             ; User SystemVerilog HDL File  ; D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Functs.sv    ;         ;
-; Converter.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Converter.sv ;         ;
-; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv       ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shifting:shiftlft"                                                                                                                                                                       ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; shifter     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; shifter[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                         ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 8                     ;
-;                                             ;                       ;
-; Combinational ALUT usage for logic          ; 12                    ;
-;     -- 7 input functions                    ; 0                     ;
-;     -- 6 input functions                    ; 4                     ;
-;     -- 5 input functions                    ; 0                     ;
-;     -- 4 input functions                    ; 4                     ;
-;     -- <=3 input functions                  ; 4                     ;
-;                                             ;                       ;
-; Dedicated logic registers                   ; 4                     ;
-;                                             ;                       ;
-; I/O pins                                    ; 40                    ;
-;                                             ;                       ;
-; Total DSP Blocks                            ; 0                     ;
-;                                             ;                       ;
-; Maximum fan-out node                        ; ALU_selector[0]~input ;
-; Maximum fan-out                             ; 5                     ;
-; Total fan-out                               ; 100                   ;
-; Average fan-out                             ; 1.04                  ;
-+---------------------------------------------+-----------------------+
++----------------------------------------------+
+; Port Connectivity Checks: "full_adder:adder" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; c_in ; Input ; Info     ; Stuck at GND       ;
++------+-------+----------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |ALU                       ; 12 (0)              ; 4 (0)                     ; 0                 ; 0          ; 40   ; 0            ; |ALU                ; ALU         ; work         ;
-;    |Mux:mux_1|             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Mux:mux_1      ; Mux         ; work         ;
-;    |Opcode:opcode0|        ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Opcode:opcode0 ; Opcode      ; work         ;
-;    |Opcode:opcode1|        ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Opcode:opcode1 ; Opcode      ; work         ;
-;    |Opcode:opcode2|        ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Opcode:opcode2 ; Opcode      ; work         ;
-;    |Opcode:opcode3|        ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Opcode:opcode3 ; Opcode      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; Mux:mux_1|out_alu[0]                               ; trigger             ; yes                    ;
-; Mux:mux_1|out_alu[1]                               ; trigger             ; yes                    ;
-; Mux:mux_1|out_alu[2]                               ; trigger             ; yes                    ;
-; Mux:mux_1|out_alu[3]                               ; trigger             ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 4     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 16:1               ; 4 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; No         ; |ALU|Mux:mux_1|Mux3        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; N              ; 4     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Mux:mux_1 ;
-+----------------+-------+-------------------------------+
-; Parameter Name ; Value ; Type                          ;
-+----------------+-------+-------------------------------+
-; N              ; 4     ; Signed Integer                ;
-+----------------+-------+-------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: AND_gate:andgate ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; N              ; 4     ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: OR_gate:orgate ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; N              ; 4     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Mux:mux_1"                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; out_aux ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 4                           ;
-;     plain             ; 4                           ;
-; arriav_lcell_comb     ; 13                          ;
-;     normal            ; 13                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         4 data inputs ; 4                           ;
-;         6 data inputs ; 4                           ;
-; boundary_port         ; 40                          ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.54                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Sep 10 14:14:51 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+    Info: Processing started: Mon Sep 11 20:28:41 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file opcode.sv
-    Info (12023): Found entity 1: Opcode File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Opcode.sv Line: 1
-Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
-    Info (12023): Found entity 1: Mux File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 1
-Info (12021): Found 3 design units, including 3 entities, in source file functs.sv
-    Info (12023): Found entity 1: AND_gate File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Functs.sv Line: 2
-    Info (12023): Found entity 2: OR_gate File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Functs.sv Line: 14
-    Info (12023): Found entity 3: NOT_gate File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Functs.sv Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file dispconverter.sv
-    Info (12023): Found entity 1: DispConverter File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/DispConverter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file converter.sv
-    Info (12023): Found entity 1: Converter File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Converter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file alu_testb.sv
-    Info (12023): Found entity 1: ALU_TESTB File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU_TESTB.sv Line: 1
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file timeanalyzer_tb.sv
+    Info (12023): Found entity 1: TimeAnalyzer_TB File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/TimeAnalyzer_TB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file timeanalyzer.sv
+    Info (12023): Found entity 1: TimeAnalyzer File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/TimeAnalyzer.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file registers.sv
+    Info (12023): Found entity 1: InputRegister File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Registers.sv Line: 1
+    Info (12023): Found entity 2: OutputRegister File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Registers.sv Line: 24
+Warning (12019): Can't analyze file -- file ALU_TB.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at DispConverter.sv(6): created implicit net for "A" File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/DispConverter.sv Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at DispConverter.sv(7): created implicit net for "B" File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/DispConverter.sv Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at DispConverter.sv(8): created implicit net for "C" File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/DispConverter.sv Line: 8
-Warning (10236): Verilog HDL Implicit Net warning at DispConverter.sv(9): created implicit net for "D" File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/DispConverter.sv Line: 9
+    Info (12023): Found entity 1: ALU File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file opcodeconverter.sv
+    Info (12023): Found entity 1: OpcodeConverter File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/OpcodeConverter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file displayconverter.sv
+    Info (12023): Found entity 1: DisplayConverter File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/DisplayConverter.sv Line: 1
+Info (12021): Found 10 design units, including 10 entities, in source file functions.sv
+    Info (12023): Found entity 1: and_gate File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 2
+    Info (12023): Found entity 2: not_gate File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 13
+    Info (12023): Found entity 3: or_gate File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 24
+    Info (12023): Found entity 4: xor_gate File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 35
+    Info (12023): Found entity 5: divider File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 48
+    Info (12023): Found entity 6: mod File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 77
+    Info (12023): Found entity 7: full_adder File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 88
+    Info (12023): Found entity 8: substractor File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 101
+    Info (12023): Found entity 9: multiplier File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 114
+    Info (12023): Found entity 10: shifting File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Functions.sv Line: 135
+Info (12021): Found 1 design units, including 1 entities, in source file opcode.sv
+    Info (12023): Found entity 1: Opcode File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Opcode.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file multiplexor.sv
+    Info (12023): Found entity 1: Multiplexor File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at TimeAnalyzer.sv(19): created implicit net for "trigg" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/TimeAnalyzer.sv Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at TimeAnalyzer.sv(20): created implicit net for "res" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/TimeAnalyzer.sv Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at DisplayConverter.sv(6): created implicit net for "A" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/DisplayConverter.sv Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at DisplayConverter.sv(7): created implicit net for "B" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/DisplayConverter.sv Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at DisplayConverter.sv(8): created implicit net for "C" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/DisplayConverter.sv Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at DisplayConverter.sv(9): created implicit net for "D" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/DisplayConverter.sv Line: 9
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10034): Output port "display1" at ALU.sv(13) has no driver File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 13
-Warning (10034): Output port "display2" at ALU.sv(14) has no driver File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 14
-Warning (10034): Output port "CarryOut" at ALU.sv(8) has no driver File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 8
-Warning (10034): Output port "Zero" at ALU.sv(9) has no driver File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 9
-Warning (10034): Output port "Negative" at ALU.sv(10) has no driver File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 10
-Warning (10034): Output port "Overflow" at ALU.sv(11) has no driver File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 11
-Info (12128): Elaborating entity "Opcode" for hierarchy "Opcode:opcode0" File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 38
-Info (12128): Elaborating entity "Converter" for hierarchy "Converter:converter" File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 43
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux_1" File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 51
-Warning (10240): Verilog HDL Always Construct warning at Mux.sv(24): inferring latch(es) for variable "out_aluaux", which holds its previous value in one or more paths through the always construct File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 24
-Warning (10240): Verilog HDL Always Construct warning at Mux.sv(24): inferring latch(es) for variable "out_alu", which holds its previous value in one or more paths through the always construct File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 24
-Info (10041): Inferred latch for "out_aluaux[0]" at Mux.sv(24) File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 24
-Info (10041): Inferred latch for "out_aluaux[1]" at Mux.sv(24) File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 24
-Info (10041): Inferred latch for "out_aluaux[2]" at Mux.sv(24) File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 24
-Info (10041): Inferred latch for "out_aluaux[3]" at Mux.sv(24) File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 24
-Info (10041): Inferred latch for "out_alu[0]" at Mux.sv(46) File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 46
-Info (10041): Inferred latch for "out_alu[1]" at Mux.sv(46) File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 46
-Info (10041): Inferred latch for "out_alu[2]" at Mux.sv(46) File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 46
-Info (10041): Inferred latch for "out_alu[3]" at Mux.sv(46) File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 46
-Info (12128): Elaborating entity "AND_gate" for hierarchy "AND_gate:andgate" File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 53
-Info (12128): Elaborating entity "OR_gate" for hierarchy "OR_gate:orgate" File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 54
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "CarryOut" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 8
-    Warning (13410): Pin "Zero" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 9
-    Warning (13410): Pin "Negative" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 10
-    Warning (13410): Pin "Overflow" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 11
-    Warning (13410): Pin "display1[0]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 13
-    Warning (13410): Pin "display1[1]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 13
-    Warning (13410): Pin "display1[2]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 13
-    Warning (13410): Pin "display1[3]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 13
-    Warning (13410): Pin "display1[4]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 13
-    Warning (13410): Pin "display1[5]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 13
-    Warning (13410): Pin "display1[6]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 13
-    Warning (13410): Pin "display2[0]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 14
-    Warning (13410): Pin "display2[1]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 14
-    Warning (13410): Pin "display2[2]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 14
-    Warning (13410): Pin "display2[3]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 14
-    Warning (13410): Pin "display2[4]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 14
-    Warning (13410): Pin "display2[5]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 14
-    Warning (13410): Pin "display2[6]" is stuck at GND File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/ALU.sv Line: 14
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/output_files/ALU.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 52 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 12 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 4855 megabytes
-    Info: Processing ended: Sun Sep 10 14:14:57 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:16
+Info (12128): Elaborating entity "Opcode" for hierarchy "Opcode:opcode0" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 37
+Info (12128): Elaborating entity "OpcodeConverter" for hierarchy "OpcodeConverter:opcodeconverter" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 42
+Info (12128): Elaborating entity "Multiplexor" for hierarchy "Multiplexor:mux_1" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 46
+Warning (10240): Verilog HDL Always Construct warning at Multiplexor.sv(24): inferring latch(es) for variable "out_alu_aux", which holds its previous value in one or more paths through the always construct File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 24
+Warning (10240): Verilog HDL Always Construct warning at Multiplexor.sv(24): inferring latch(es) for variable "out_alu", which holds its previous value in one or more paths through the always construct File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 24
+Info (10041): Inferred latch for "out_alu_aux[0]" at Multiplexor.sv(24) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 24
+Info (10041): Inferred latch for "out_alu_aux[1]" at Multiplexor.sv(24) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 24
+Info (10041): Inferred latch for "out_alu_aux[2]" at Multiplexor.sv(24) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 24
+Info (10041): Inferred latch for "out_alu_aux[3]" at Multiplexor.sv(24) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 24
+Info (10041): Inferred latch for "out_alu[0]" at Multiplexor.sv(47) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 47
+Info (10041): Inferred latch for "out_alu[1]" at Multiplexor.sv(47) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 47
+Info (10041): Inferred latch for "out_alu[2]" at Multiplexor.sv(47) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 47
+Info (10041): Inferred latch for "out_alu[3]" at Multiplexor.sv(47) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 47
+Info (12128): Elaborating entity "full_adder" for hierarchy "full_adder:adder" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 48
+Info (12128): Elaborating entity "substractor" for hierarchy "substractor:tractor" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 49
+Info (12128): Elaborating entity "multiplier" for hierarchy "multiplier:multip" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 50
+Info (12128): Elaborating entity "divider" for hierarchy "divider:divid" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 52
+Info (12128): Elaborating entity "mod" for hierarchy "mod:moder" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 53
+Info (12128): Elaborating entity "and_gate" for hierarchy "and_gate:agate" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 55
+Info (12128): Elaborating entity "or_gate" for hierarchy "or_gate:ogate" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 56
+Info (12128): Elaborating entity "xor_gate" for hierarchy "xor_gate:xgate" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 57
+Info (12128): Elaborating entity "shifting" for hierarchy "shifting:shiftlft" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 59
+Info (12128): Elaborating entity "DisplayConverter" for hierarchy "DisplayConverter:converter1" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/ALU.sv Line: 63
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/output_files/ALU.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4791 megabytes
+    Info: Processing ended: Mon Sep 11 20:28:50 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:12
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/output_files/ALU.map.smsg.
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/output_files/ALU.map.smsg.
 
 

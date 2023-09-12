@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at Mux.sv(24): always construct contains both blocking and non-blocking assignments File: D:/.TEC/Taller De Diseno Digital/GIT/dcastro_mgarro_jsantamaria_digital_design_lab_2023/Lab3/ALU/Mux.sv Line: 24
+Warning (10268): Verilog HDL information at Multiplexor.sv(24): always construct contains both blocking and non-blocking assignments File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/Laboratorio_3/Experimento_1/Multiplexor.sv Line: 24

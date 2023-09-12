@@ -1,17 +1,17 @@
-Fitter Status : Successful - Sun Sep 10 14:15:46 2023
-Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Fitter Status : Successful - Sat Sep  9 18:26:35 2023
+Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : ALU
 Top-level Entity Name : ALU
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 7 / 32,070 ( < 1 % )
-Total registers : 8
+Logic utilization (in ALMs) : 62 / 32,070 ( < 1 % )
+Total registers : 6
 Total pins : 40 / 457 ( 9 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )
-Total DSP Blocks : 0 / 87 ( 0 % )
+Total DSP Blocks : 1 / 87 ( 1 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

@@ -3,243 +3,243 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'trigger'
-Slack : -3.309
-TNS   : -12.559
+Slack : -4.162
+TNS   : -29.072
 
-Type  : Slow 1100mV 85C Model Setup 'ALU_selector[0]'
-Slack : -0.534
-TNS   : -1.064
+Type  : Slow 1100mV 85C Model Setup 'ALU_Sel[2]'
+Slack : -0.587
+TNS   : -0.587
 
-Type  : Slow 1100mV 85C Model Setup 'ALU_selector[3]'
-Slack : -0.528
-TNS   : -1.052
+Type  : Slow 1100mV 85C Model Setup 'ALU_Sel[1]'
+Slack : -0.544
+TNS   : -0.544
 
-Type  : Slow 1100mV 85C Model Setup 'ALU_selector[1]'
-Slack : -0.310
-TNS   : -0.616
+Type  : Slow 1100mV 85C Model Setup 'ALU_Sel[0]'
+Slack : -0.533
+TNS   : -1.062
 
-Type  : Slow 1100mV 85C Model Setup 'ALU_selector[2]'
+Type  : Slow 1100mV 85C Model Setup 'ALU_Sel[3]'
 Slack : -0.309
-TNS   : -0.615
+TNS   : -0.614
 
-Type  : Slow 1100mV 85C Model Hold 'ALU_selector[1]'
-Slack : 0.376
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'ALU_selector[2]'
-Slack : 0.380
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'ALU_selector[3]'
-Slack : 0.583
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'ALU_selector[0]'
-Slack : 0.587
+Type  : Slow 1100mV 85C Model Hold 'ALU_Sel[2]'
+Slack : 0.054
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'trigger'
-Slack : 1.223
+Slack : 0.366
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ALU_selector[1]'
-Slack : -0.394
-TNS   : -1.233
+Type  : Slow 1100mV 85C Model Hold 'ALU_Sel[3]'
+Slack : 0.375
+TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ALU_selector[2]'
-Slack : -0.394
-TNS   : -1.200
+Type  : Slow 1100mV 85C Model Hold 'ALU_Sel[0]'
+Slack : 0.565
+TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ALU_selector[3]'
-Slack : -0.394
-TNS   : -1.103
+Type  : Slow 1100mV 85C Model Hold 'ALU_Sel[1]'
+Slack : 0.574
+TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ALU_selector[0]'
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ALU_Sel[3]'
 Slack : -0.394
-TNS   : -1.071
+TNS   : -1.485
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ALU_Sel[0]'
+Slack : -0.394
+TNS   : -1.402
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ALU_Sel[1]'
+Slack : -0.394
+TNS   : -0.766
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ALU_Sel[2]'
+Slack : -0.394
+TNS   : -0.758
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'trigger'
-Slack : 0.244
+Slack : 0.089
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'trigger'
-Slack : -3.193
-TNS   : -12.082
+Slack : -4.100
+TNS   : -28.506
 
-Type  : Slow 1100mV 0C Model Setup 'ALU_selector[3]'
-Slack : -0.526
-TNS   : -1.048
+Type  : Slow 1100mV 0C Model Setup 'ALU_Sel[2]'
+Slack : -0.549
+TNS   : -0.549
 
-Type  : Slow 1100mV 0C Model Setup 'ALU_selector[0]'
-Slack : -0.524
-TNS   : -1.041
+Type  : Slow 1100mV 0C Model Setup 'ALU_Sel[1]'
+Slack : -0.530
+TNS   : -0.530
 
-Type  : Slow 1100mV 0C Model Setup 'ALU_selector[1]'
-Slack : -0.290
-TNS   : -0.574
+Type  : Slow 1100mV 0C Model Setup 'ALU_Sel[0]'
+Slack : -0.528
+TNS   : -1.051
 
-Type  : Slow 1100mV 0C Model Setup 'ALU_selector[2]'
-Slack : -0.285
-TNS   : -0.566
+Type  : Slow 1100mV 0C Model Setup 'ALU_Sel[3]'
+Slack : -0.288
+TNS   : -0.571
 
-Type  : Slow 1100mV 0C Model Hold 'ALU_selector[1]'
-Slack : 0.351
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'ALU_selector[2]'
-Slack : 0.354
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'ALU_selector[3]'
-Slack : 0.568
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'ALU_selector[0]'
-Slack : 0.569
+Type  : Slow 1100mV 0C Model Hold 'ALU_Sel[2]'
+Slack : 0.041
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'trigger'
-Slack : 1.130
+Slack : 0.309
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ALU_selector[2]'
-Slack : -0.394
-TNS   : -1.243
+Type  : Slow 1100mV 0C Model Hold 'ALU_Sel[3]'
+Slack : 0.349
+TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ALU_selector[1]'
-Slack : -0.394
-TNS   : -1.202
+Type  : Slow 1100mV 0C Model Hold 'ALU_Sel[0]'
+Slack : 0.550
+TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ALU_selector[3]'
-Slack : -0.394
-TNS   : -1.121
+Type  : Slow 1100mV 0C Model Hold 'ALU_Sel[1]'
+Slack : 0.561
+TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ALU_selector[0]'
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ALU_Sel[3]'
 Slack : -0.394
-TNS   : -1.086
+TNS   : -1.471
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ALU_Sel[0]'
+Slack : -0.394
+TNS   : -1.380
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ALU_Sel[1]'
+Slack : -0.394
+TNS   : -0.760
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ALU_Sel[2]'
+Slack : -0.394
+TNS   : -0.748
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'trigger'
-Slack : 0.242
+Slack : 0.041
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'trigger'
-Slack : -1.564
-TNS   : -5.760
+Slack : -2.025
+TNS   : -14.065
 
-Type  : Fast 1100mV 85C Model Setup 'ALU_selector[0]'
-Slack : -0.036
-TNS   : -0.068
+Type  : Fast 1100mV 85C Model Setup 'ALU_Sel[2]'
+Slack : -0.063
+TNS   : -0.063
 
-Type  : Fast 1100mV 85C Model Setup 'ALU_selector[3]'
-Slack : -0.029
-TNS   : -0.057
+Type  : Fast 1100mV 85C Model Setup 'ALU_Sel[1]'
+Slack : -0.023
+TNS   : -0.023
 
-Type  : Fast 1100mV 85C Model Setup 'ALU_selector[1]'
-Slack : 0.075
-TNS   : 0.000
+Type  : Fast 1100mV 85C Model Setup 'ALU_Sel[0]'
+Slack : -0.018
+TNS   : -0.034
 
-Type  : Fast 1100mV 85C Model Setup 'ALU_selector[2]'
+Type  : Fast 1100mV 85C Model Setup 'ALU_Sel[3]'
 Slack : 0.078
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'ALU_selector[2]'
-Slack : 0.165
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'ALU_selector[1]'
-Slack : 0.170
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'ALU_selector[3]'
-Slack : 0.300
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'ALU_selector[0]'
-Slack : 0.305
-TNS   : 0.000
-
 Type  : Fast 1100mV 85C Model Hold 'trigger'
-Slack : 0.640
+Slack : -0.021
+TNS   : -0.021
+
+Type  : Fast 1100mV 85C Model Hold 'ALU_Sel[2]'
+Slack : -0.012
+TNS   : -0.012
+
+Type  : Fast 1100mV 85C Model Hold 'ALU_Sel[3]'
+Slack : 0.164
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ALU_selector[1]'
-Slack : -0.267
-TNS   : -0.531
+Type  : Fast 1100mV 85C Model Hold 'ALU_Sel[0]'
+Slack : 0.288
+TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ALU_selector[2]'
-Slack : -0.261
-TNS   : -0.521
+Type  : Fast 1100mV 85C Model Hold 'ALU_Sel[1]'
+Slack : 0.292
+TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ALU_selector[3]'
-Slack : -0.214
-TNS   : -0.426
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ALU_Sel[1]'
+Slack : -0.349
+TNS   : -0.349
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ALU_selector[0]'
-Slack : -0.199
-TNS   : -0.395
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ALU_Sel[2]'
+Slack : -0.344
+TNS   : -0.344
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ALU_Sel[3]'
+Slack : -0.333
+TNS   : -0.666
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ALU_Sel[0]'
+Slack : -0.296
+TNS   : -0.590
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'trigger'
-Slack : 0.016
-TNS   : 0.000
+Slack : -0.209
+TNS   : -1.889
 
 Type  : Fast 1100mV 0C Model Setup 'trigger'
-Slack : -1.339
-TNS   : -4.950
+Slack : -1.772
+TNS   : -12.084
 
-Type  : Fast 1100mV 0C Model Setup 'ALU_selector[0]'
-Slack : 0.005
+Type  : Fast 1100mV 0C Model Setup 'ALU_Sel[2]'
+Slack : -0.022
+TNS   : -0.022
+
+Type  : Fast 1100mV 0C Model Setup 'ALU_Sel[1]'
+Slack : 0.017
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'ALU_selector[3]'
-Slack : 0.011
+Type  : Fast 1100mV 0C Model Setup 'ALU_Sel[0]'
+Slack : 0.018
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'ALU_selector[1]'
-Slack : 0.116
+Type  : Fast 1100mV 0C Model Setup 'ALU_Sel[3]'
+Slack : 0.120
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'ALU_selector[2]'
-Slack : 0.119
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'ALU_selector[2]'
-Slack : 0.137
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'ALU_selector[1]'
-Slack : 0.143
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'ALU_selector[3]'
-Slack : 0.273
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'ALU_selector[0]'
-Slack : 0.275
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Hold 'ALU_Sel[2]'
+Slack : -0.032
+TNS   : -0.032
 
 Type  : Fast 1100mV 0C Model Hold 'trigger'
-Slack : 0.494
+Slack : 0.002
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ALU_selector[2]'
-Slack : -0.277
-TNS   : -0.553
+Type  : Fast 1100mV 0C Model Hold 'ALU_Sel[3]'
+Slack : 0.139
+TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ALU_selector[1]'
-Slack : -0.268
-TNS   : -0.534
+Type  : Fast 1100mV 0C Model Hold 'ALU_Sel[0]'
+Slack : 0.257
+TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ALU_selector[3]'
-Slack : -0.234
-TNS   : -0.467
+Type  : Fast 1100mV 0C Model Hold 'ALU_Sel[1]'
+Slack : 0.264
+TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ALU_selector[0]'
-Slack : -0.221
-TNS   : -0.440
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ALU_Sel[2]'
+Slack : -0.348
+TNS   : -0.354
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ALU_Sel[1]'
+Slack : -0.347
+TNS   : -0.353
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ALU_Sel[3]'
+Slack : -0.335
+TNS   : -0.669
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ALU_Sel[0]'
+Slack : -0.305
+TNS   : -0.607
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'trigger'
-Slack : 0.011
-TNS   : 0.000
+Slack : -0.194
+TNS   : -1.836
 
 ------------------------------------------------------------
