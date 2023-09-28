@@ -1,0 +1,17 @@
+module ClockDivider (
+  input wire clk_50MHz,   // Frecuencia de reloj de 50 MHz
+  output wire clk_vga     // Frecuencia de salida para VGA
+);
+
+  reg [1:0] divider = 2'b00; // Divisor inicial (2 en este ejemplo)
+  always @(posedge clk_50MHz) begin
+    // Contador para el divisor
+    if (divider == 2'b00) begin
+      divider <= 2'b01; // Cambia el divisor cuando el contador llega a cero
+      clk_vga <= ~clk_vga; // Genera una señal de reloj de salida
+    end else begin
+      divider <= divider - 1'b1; // Decrementa el contador
+    end
+  end
+
+endmodule

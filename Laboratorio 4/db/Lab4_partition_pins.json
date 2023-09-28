@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "vgaclk",
+					"strict" : false
+				},
+				{
 					"name" : "hsync",
 					"strict" : false
 				},
@@ -12,71 +16,107 @@
 					"strict" : false
 				},
 				{
-					"name" : "rgb[0]",
+					"name" : "sync_b",
 					"strict" : false
 				},
 				{
-					"name" : "rgb[1]",
+					"name" : "blank_b",
 					"strict" : false
 				},
 				{
-					"name" : "rgb[2]",
+					"name" : "red[0]",
 					"strict" : false
 				},
 				{
-					"name" : "rgb[3]",
+					"name" : "red[1]",
 					"strict" : false
 				},
 				{
-					"name" : "rgb[4]",
+					"name" : "red[2]",
 					"strict" : false
 				},
 				{
-					"name" : "rgb[5]",
+					"name" : "red[3]",
 					"strict" : false
 				},
 				{
-					"name" : "rgb[6]",
+					"name" : "red[4]",
 					"strict" : false
 				},
 				{
-					"name" : "rgb[7]",
+					"name" : "red[5]",
 					"strict" : false
 				},
 				{
-					"name" : "rgb[8]",
+					"name" : "red[6]",
 					"strict" : false
 				},
 				{
-					"name" : "xpos[0]",
+					"name" : "red[7]",
 					"strict" : false
 				},
 				{
-					"name" : "xpos[1]",
+					"name" : "green[0]",
 					"strict" : false
 				},
 				{
-					"name" : "xpos[2]",
+					"name" : "green[1]",
 					"strict" : false
 				},
 				{
-					"name" : "xpos[3]",
+					"name" : "green[2]",
 					"strict" : false
 				},
 				{
-					"name" : "ypos[0]",
+					"name" : "green[3]",
 					"strict" : false
 				},
 				{
-					"name" : "ypos[1]",
+					"name" : "green[4]",
 					"strict" : false
 				},
 				{
-					"name" : "ypos[2]",
+					"name" : "green[5]",
 					"strict" : false
 				},
 				{
-					"name" : "ypos[3]",
+					"name" : "green[6]",
+					"strict" : false
+				},
+				{
+					"name" : "green[7]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[0]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[1]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[2]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[3]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[4]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[5]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[6]",
+					"strict" : false
+				},
+				{
+					"name" : "blue[7]",
 					"strict" : false
 				},
 				{

@@ -1,11 +1,22 @@
 module VGA_Controller (
-  input wire clk,        // Frecuencia de reloj del sistema
-  output wire hsync,     // Sincronización horizontal
-  output wire vsync,     // Sincronización vertical
-  output wire [9:0] rgb, // Señal de color RGB de 10 bits (3 bits R, 3 bits G, 3 bits B, 1 bit de sincronización)
-  output wire [3:0] xpos, // Posición horizontal actual
-  output wire [3:0] ypos  // Posición vertical actual
+  input logic clk_50MHz,    // Frecuencia de reloj de 50 MHz
+  output logic hsync_n,     // Sincronización horizontal (negada)
+  output logic vsync_n,     // Sincronización vertical (negada)
+  output logic blank_n,     // Señal BLANK (negada)
+  output logic [7:0] red,   // Componente de color rojo
+  output logic [7:0] green, // Componente de color verde
+  output logic [7:0] blue,  // Componente de color azul
+  output logic [3:0] xpos,  // Posición horizontal actual
+  output logic [3:0] ypos   // Posición vertical actual
 );
+
+  // Módulo del divisor de frecuencia
+  logic clk_vga; // Salida del divisor
+
+  ClockDivider divider (
+    .clk_50MHz(clk_50MHz),
+    .clk_vga(clk_vga)
+  );
 
   // Parámetros de resolución VGA
   localparam H_SYNC_CYCLES = 96;
@@ -23,7 +34,7 @@ module VGA_Controller (
   reg [10:0] h_counter = 0;
   reg [10:0] v_counter = 0;
 
-  always @(posedge clk) begin
+  always @(posedge clk_vga) begin
     if (h_counter == H_TOTAL-1) begin
       h_counter <= 0;
       if (v_counter == V_TOTAL-1) begin
@@ -36,15 +47,26 @@ module VGA_Controller (
     end
   end
 
-  assign hsync = (h_counter < H_SYNC_CYCLES);
-  assign vsync = (v_counter < V_SYNC_CYCLES);
+  assign hsync_n = ~(h_counter < H_SYNC_CYCLES);
+  assign vsync_n = ~(v_counter < V_SYNC_CYCLES);
+  assign blank_n = ~(h_counter < H_ACTIVE_VIDEO) || ~(v_counter < V_ACTIVE_VIDEO);
 
-  always @(posedge clk) begin
-    if (hsync || vsync) begin
-      rgb <= 10'b000_000_0000; // Color negro durante los pulsos de sincronización
+  always @(posedge clk_vga) begin
+    if (~blank_n) begin
+      red <= 8'b00000000;
+      green <= 8'b00000000;
+      blue <= 8'b00000000;
     end else begin
-      // Genera un patrón de colores simple (cambia según la posición)
-      rgb <= {h_counter[9:7], v_counter[9:7], h_counter[9:7] & v_counter[9:7]};
+      // Genera rayas de colores
+      if (h_counter[8] == 1) begin
+        red <= 8'b11111111;
+        green <= 8'b00000000;
+        blue <= 8'b00000000;
+      end else begin
+        red <= 8'b00000000;
+        green <= 8'b00000000;
+        blue <= 8'b11111111;
+      end
     end
   end
 
@@ -52,3 +74,4 @@ module VGA_Controller (
   assign ypos = v_counter[9:6];
 
 endmodule
+

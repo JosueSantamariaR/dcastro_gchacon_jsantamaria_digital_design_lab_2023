@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4
-Tue Sep 26 16:21:42 2023
+Thu Sep 28 11:22:23 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -13,11 +13,12 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: vgaController:vgaCont
+ 10. Parameter Settings for User Entity Instance: videoGen:videoGen
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +45,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Sep 26 16:21:42 2023          ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 28 11:22:23 2023          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; Lab4                                           ;
-; Top-level Entity Name           ; VGA_Controller                                 ;
+; Top-level Entity Name           ; vga                                            ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 31                                             ;
-; Total pins                      ; 21                                             ;
+; Total registers                 ; 22                                             ;
+; Total pins                      ; 30                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -70,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; VGA_Controller     ; Lab4               ;
+; Top-level entity name                                                           ; vga                ; Lab4               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -168,60 +169,54 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; VGA_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/VGA_Controller.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ClockDivider.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/ClockDivider.sv ;         ;
+; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv          ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 19        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 35        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 1         ;
-;     -- 5 input functions                    ; 3         ;
-;     -- 4 input functions                    ; 5         ;
-;     -- <=3 input functions                  ; 26        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 31        ;
-;                                             ;           ;
-; I/O pins                                    ; 21        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 31        ;
-; Total fan-out                               ; 236       ;
-; Average fan-out                             ; 2.19      ;
-+---------------------------------------------+-----------+
++--------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                              ;
++---------------------------------------------+----------------------------+
+; Resource                                    ; Usage                      ;
++---------------------------------------------+----------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 23                         ;
+;                                             ;                            ;
+; Combinational ALUT usage for logic          ; 38                         ;
+;     -- 7 input functions                    ; 0                          ;
+;     -- 6 input functions                    ; 6                          ;
+;     -- 5 input functions                    ; 5                          ;
+;     -- 4 input functions                    ; 3                          ;
+;     -- <=3 input functions                  ; 24                         ;
+;                                             ;                            ;
+; Dedicated logic registers                   ; 22                         ;
+;                                             ;                            ;
+; I/O pins                                    ; 30                         ;
+;                                             ;                            ;
+; Total DSP Blocks                            ; 0                          ;
+;                                             ;                            ;
+; Maximum fan-out node                        ; videoGen:videoGen|red[0]~5 ;
+; Maximum fan-out                             ; 24                         ;
+; Total fan-out                               ; 254                        ;
+; Average fan-out                             ; 2.12                       ;
++---------------------------------------------+----------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
-; |VGA_Controller            ; 35 (35)             ; 31 (31)                   ; 0                 ; 0          ; 21   ; 0            ; |VGA_Controller     ; VGA_Controller ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                             ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+---------------+--------------+
+; |vga                       ; 38 (0)              ; 22 (0)                    ; 0                 ; 0          ; 30   ; 0            ; |vga                       ; vga           ; work         ;
+;    |ClockDivider:divider|  ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|ClockDivider:divider  ; ClockDivider  ; work         ;
+;    |vgaController:vgaCont| ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont ; vgaController ; work         ;
+;    |videoGen:videoGen|     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen     ; videoGen      ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; rgb[9]~reg0                           ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -229,14 +224,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 31    ;
-; Number of registers using Synchronous Clear  ; 31    ;
+; Total registers                              ; 22    ;
+; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vgaController:vgaCont ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; HACTIVE        ; 640   ; Signed Integer                            ;
+; HFP            ; 16    ; Signed Integer                            ;
+; HSYN           ; 96    ; Signed Integer                            ;
+; HBP            ; 48    ; Signed Integer                            ;
+; HMAX           ; 800   ; Signed Integer                            ;
+; VBP            ; 32    ; Signed Integer                            ;
+; VACTIVE        ; 480   ; Signed Integer                            ;
+; VFP            ; 11    ; Signed Integer                            ;
+; VSYN           ; 2     ; Signed Integer                            ;
+; VMAX           ; 525   ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: videoGen:videoGen ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; TEXT_WIDTH     ; 160   ; Signed Integer                        ;
+; TEXT_HEIGHT    ; 40    ; Signed Integer                        ;
+; TEXT_X         ; 240   ; Signed Integer                        ;
+; TEXT_Y         ; 220   ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -244,24 +271,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 31                          ;
-;     ENA SCLR          ; 11                          ;
-;     SCLR              ; 20                          ;
-; arriav_lcell_comb     ; 37                          ;
-;     arith             ; 22                          ;
-;         1 data inputs ; 22                          ;
-;     normal            ; 15                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 5                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 1                           ;
-; boundary_port         ; 21                          ;
+; arriav_ff             ; 22                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 39                          ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 20                          ;
+;     normal            ; 19                          ;
+;         1 data inputs ; 2                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 3                           ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 6                           ;
+; boundary_port         ; 30                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.72                        ;
+; Average LUT depth     ; 1.98                        ;
 +-----------------------+-----------------------------+
 
 
@@ -280,27 +306,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Sep 26 16:21:32 2023
+    Info: Processing started: Thu Sep 28 11:22:13 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
-    Info (12023): Found entity 1: VGA_Controller File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/VGA_Controller.sv Line: 1
-Info (12127): Elaborating entity "VGA_Controller" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(32): truncated value with size 32 to match size of target (11) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/VGA_Controller.sv Line: 32
-Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(35): truncated value with size 32 to match size of target (11) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/VGA_Controller.sv Line: 35
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "rgb[9]" is stuck at GND File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/VGA_Controller.sv Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.sv
+    Info (12023): Found entity 1: ClockDivider File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/ClockDivider.sv Line: 1
+Info (12021): Found 3 design units, including 3 entities, in source file vga.sv
+    Info (12023): Found entity 1: vgaController File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 1
+    Info (12023): Found entity 2: videoGen File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 48
+    Info (12023): Found entity 3: vga File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 82
+Info (12127): Elaborating entity "vga" for the top level hierarchy
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:divider" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 96
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 98
+Warning (10230): Verilog HDL assignment warning at vga.sv(27): truncated value with size 32 to match size of target (10) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at vga.sv(30): truncated value with size 32 to match size of target (10) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 30
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 99
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 41 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 39 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Tue Sep 26 16:21:42 2023
+    Info: Processing ended: Thu Sep 28 11:22:23 2023
     Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:12
 
