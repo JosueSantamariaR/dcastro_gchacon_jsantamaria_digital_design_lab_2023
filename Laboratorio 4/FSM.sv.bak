@@ -1,0 +1,6 @@
+module FSM (
+	input logic entrada,
+	input logic clk,
+	input logic rst,
+	output logic test
+);
