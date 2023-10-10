@@ -124,7 +124,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "btn_reset",
+					"name" : "btn_reset_right",
+					"strict" : false
+				},
+				{
+					"name" : "btn_reset_down",
 					"strict" : false
 				}
 			]

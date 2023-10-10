@@ -85,7 +85,8 @@ endmodule
 module videoGen(
   input logic [9:0] x,
   input logic [9:0] y,
-  input logic btn_reset, // Entrada del botón para restablecer
+  input logic btn_reset_right, // Botón para restablecer a la derecha
+  input logic btn_reset_down,  // Botón para restablecer hacia abajo
   output logic [7:0] red,
   output logic [7:0] green,
   output logic [7:0] blue
@@ -110,16 +111,24 @@ module videoGen(
   int rel_x;
   int rel_y;
 
-  // Variable para controlar la visibilidad del cuadro negro
-  logic show_black_box;
+  // Variables para controlar la visibilidad del cuadro negro
+  logic show_black_box_right;
+  logic show_black_box_down;
   
-  // Variable para controlar la posición de la casilla actual en el eje X
+  // Variables para controlar la posición de la casilla actual en los ejes X e Y
   int current_x_position = 0;
+  int current_y_position = 0;
 
-  always_ff @(posedge btn_reset) begin
-    // Al presionar el botón, restablece la visibilidad del cuadro negro y aumenta la posición de la casilla
-    show_black_box <= !show_black_box;
+  always_ff @(posedge btn_reset_right) begin
+    // Al presionar el botón para la derecha, restablece la visibilidad del cuadro negro y aumenta la posición de la casilla en X
+    show_black_box_right <= !show_black_box_right;
     current_x_position <= current_x_position + 1;
+  end
+
+  always_ff @(posedge btn_reset_down) begin
+    // Al presionar el botón hacia abajo, restablece la visibilidad del cuadro negro y aumenta la posición de la casilla en Y
+    show_black_box_down <= !show_black_box_down;
+    current_y_position <= current_y_position + 1;
   end
 
   always_comb begin
@@ -147,8 +156,15 @@ module videoGen(
       blue = background_color;
     end
 
-    // Agrega un cuadro negro sobre la casilla actual si show_black_box es 1
-    if (show_black_box && rel_y >= 0 && rel_y < CELL_HEIGHT && rel_x >= current_x_position * CELL_WIDTH && rel_x < (current_x_position + 1) * CELL_WIDTH) begin
+    // Agrega un cuadro negro sobre la casilla actual si show_black_box_right es 1
+    if (show_black_box_right && rel_y >= 0 && rel_y < CELL_HEIGHT && rel_x >= current_x_position * CELL_WIDTH && rel_x < (current_x_position + 1) * CELL_WIDTH) begin
+      red = 8'b00000000; // Negro
+      green = 8'b00000000; // Negro
+      blue = 8'b00000000; // Negro
+    end
+
+    // Agrega un cuadro negro sobre la casilla actual si show_black_box_down es 1
+    if (show_black_box_down && rel_x >= 0 && rel_x < CELL_WIDTH && rel_y >= current_y_position * CELL_HEIGHT && rel_y < (current_y_position + 1) * CELL_HEIGHT) begin
       red = 8'b00000000; // Negro
       green = 8'b00000000; // Negro
       blue = 8'b00000000; // Negro
@@ -159,7 +175,7 @@ endmodule
 
 
 module vga(
-  input logic clk, btn_reset, key1, key2, key3,
+  input logic clk, btn_reset_down, btn_reset_right, 
   output logic vgaclk, // 25.175 MHz VGA clock
   output logic hsync, vsync,
   output logic sync_b, blank_b,
@@ -179,7 +195,7 @@ module vga(
   );
 
   vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
-  videoGen videogen(x, y, btn_reset, red, green, blue);
+  videoGen videogen(x, y, btn_reset_right,btn_reset_down, red, green, blue);
 
 endmodule
 
