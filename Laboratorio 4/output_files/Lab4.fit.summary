@@ -1,17 +1,17 @@
-Fitter Status : Successful - Tue Oct 10 00:45:38 2023
+Fitter Status : Successful - Tue Oct 10 01:07:16 2023
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 Revision Name : Lab4
 Top-level Entity Name : vga
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 253 / 32,070 ( < 1 % )
-Total registers : 29
+Logic utilization (in ALMs) : 288 / 32,070 ( < 1 % )
+Total registers : 61
 Total pins : 34 / 457 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )
-Total DSP Blocks : 0 / 87 ( 0 % )
+Total DSP Blocks : 4 / 87 ( 5 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
