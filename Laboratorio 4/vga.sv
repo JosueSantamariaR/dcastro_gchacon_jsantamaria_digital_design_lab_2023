@@ -45,6 +45,43 @@ module vgaController #(
 
 endmodule
 
+module CirculoNegro(
+  input logic [9:0] x,
+  input logic [9:0] y,
+  output logic [7:0] red,
+  output logic [7:0] green,
+  output logic [7:0] blue
+);
+
+  // Parámetros para el círculo negro
+  parameter CIRCULO_SIZE = 50; // Tamaño del círculo (ancho y alto) en píxeles
+  logic [7:0] circle_color = 8'b00000000; // Color del círculo (negro)
+
+  logic [9:0] distance_x;
+  logic [9:0] distance_y;
+  logic [9:0] distance_squared;
+
+  always_comb begin
+    // Calcula la distancia desde el centro del círculo hasta el punto (x, y)
+    distance_x = x - 300; // Puedes establecer el valor del centro aquí
+    distance_y = y - 200; // Puedes establecer el valor del centro aquí
+    distance_squared = distance_x * distance_x + distance_y * distance_y;
+
+    // Si la distancia al cuadrado es menor o igual al radio del círculo al cuadrado,
+    // entonces estamos dentro del círculo y lo coloreamos de negro
+    if (distance_squared <= CIRCULO_SIZE * CIRCULO_SIZE) begin
+      red = circle_color;
+      green = circle_color;
+      blue = circle_color;
+    end else begin
+      // Si no estamos dentro del círculo, usa los colores de videoGen
+      red = red;
+      green = green;
+      blue = blue;
+    end
+  end
+endmodule
+
 module videoGen(
   input logic [9:0] x,
   input logic [9:0] y,
@@ -77,78 +114,33 @@ module videoGen(
     rel_x = x - (SCREEN_WIDTH - (NUM_COLUMNS * CELL_WIDTH)) / 2;
     rel_y = y - (SCREEN_HEIGHT - (NUM_ROWS * CELL_HEIGHT)) / 2;
 
-    // Agrega un borde gris oscuro en la parte superior
-    if (rel_y == 0 && (rel_x % CELL_WIDTH >= 2) && (rel_x % CELL_WIDTH < CELL_WIDTH - 2)) begin
-      red = 8'b11110000; // Gris oscuro en formato binario
-      green = 8'b11110000; // Gris oscuro en formato binario
-      blue = 8'b11110000; // Gris oscuro en formato binario
+    // Dibuja líneas negras alrededor de cada casilla
+    if ((rel_x % CELL_WIDTH < 2) || (rel_y % CELL_HEIGHT < 2) ||
+        (rel_x % CELL_WIDTH >= CELL_WIDTH - 2) || (rel_y % CELL_HEIGHT >= CELL_HEIGHT - 2)) begin
+      red = line_color;
+      green = line_color;
+      blue = line_color;
     end else begin
-      // Dibuja líneas negras alrededor de cada casilla
-      if ((rel_x % CELL_WIDTH < 2) || (rel_y % CELL_HEIGHT < 2) ||
-          (rel_x % CELL_WIDTH >= CELL_WIDTH - 2) || (rel_y % CELL_HEIGHT >= CELL_HEIGHT - 2)) begin
-        red = line_color;
-        green = line_color;
-        blue = line_color;
-      end else begin
-        // Rellena cada casilla con el color gris en formato binario
-        red = fill_color;
-        green = fill_color;
-        blue = fill_color;
-      end
+      // Rellena cada casilla con el color gris en formato binario
+      red = fill_color;
+      green = fill_color;
+      blue = fill_color;
+    end
 
-      // Si estamos fuera de las casillas, pinta el fondo blanco
-      if (rel_x < 0 || rel_x >= CELL_WIDTH * NUM_COLUMNS || rel_y < 0 || rel_y >= CELL_HEIGHT * NUM_ROWS) begin
-        red = background_color;
-        green = background_color;
-        blue = background_color;
-      end
+    // Si estamos fuera de las casillas, pinta el fondo blanco
+    if (rel_x < 0 || rel_x >= CELL_WIDTH * NUM_COLUMNS || rel_y < 0 || rel_y >= CELL_HEIGHT * NUM_ROWS) begin
+      red = background_color;
+      green = background_color;
+      blue = background_color;
+    end
+
+    // Agrega un cuadro negro sobre la casilla actual
+    if (rel_x >= 0 && rel_x < CELL_WIDTH && rel_y >= 0 && rel_y < CELL_HEIGHT) begin
+      red = 8'b00000000; // Negro
+      green = 8'b00000000; // Negro
+      blue = 8'b00000000; // Negro
     end
   end
-
-endmodule
-module MovimientoCuadro(
-  input logic clock, // Reloj de la FPGA
-  input logic reset, key0, key1, key2, key3, // Señal de reinicio
-  input logic [9:0] x, // Posición actual en X
-  input logic [9:0] y, // Posición actual en Y
-  output logic [9:0] new_x, // Nueva posición en X
-  output logic [9:0] new_y, // Nueva posición en Y
-  output logic [7:0] cuadro_color // Color del cuadro (blanco)
-);
-
-  // Parámetros de la matriz y del cuadro
-  parameter MATRIX_WIDTH = 8; // Ancho de la matriz
-  parameter MATRIX_HEIGHT = 8; // Alto de la matriz
-  parameter CUADRO_SIZE = 50; // Tamaño del cuadro (ancho y alto) en píxeles
-  parameter LINE_WIDTH = 2; // Ancho de las líneas negras
-  parameter FILL_COLOR = 8'b10101010; // Color de fondo de las casillas (gris)
-
-  // Registros para almacenar la posición actual del cuadro
-  logic [9:0] cuadro_x;
-  logic [9:0] cuadro_y;
-
-  always_ff @(posedge clock or posedge reset) begin
-    if (reset) begin
-      cuadro_x <= 0; // Inicializa la posición en X del cuadro a 0
-      cuadro_y <= 0; // Inicializa la posición en Y del cuadro a 0
-    end else begin
-      // Actualiza la posición del cuadro en función de los botones de control
-      if (key0 && cuadro_y < (MATRIX_HEIGHT - 1) * CUADRO_SIZE) // Mover hacia abajo
-        cuadro_y <= cuadro_y + CUADRO_SIZE;
-      else if (key1 && cuadro_y > 0) // Mover hacia arriba
-        cuadro_y <= cuadro_y - CUADRO_SIZE;
-      else if (key2 && cuadro_x < (MATRIX_WIDTH - 1) * CUADRO_SIZE) // Mover hacia la derecha
-        cuadro_x <= cuadro_x + CUADRO_SIZE;
-      else if (key3 && cuadro_x > 0) // Mover hacia la izquierda
-        cuadro_x <= cuadro_x - CUADRO_SIZE;
-    end
-  end
-
-  // Salida de las nuevas coordenadas del cuadro y el color del cuadro (blanco)
-  assign new_x = cuadro_x;
-  assign new_y = cuadro_y;
-  assign cuadro_color = 8'b11111111; // Color blanco
-
 endmodule
 
 
@@ -173,28 +165,6 @@ module vga(
   );
 
   vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
-
-  // Conexión del módulo de movimiento del cuadro
-  MovimientoCuadro movimiento_cuadro (
-    .clock(clk),
-    .reset(!blank_b), // Reiniciar en cada nuevo cuadro
-    .x(x), // Cambia x por la coordenada actual x
-    .y(y), // Cambia y por la coordenada actual y
-    .new_x(posx), // Salida de la nueva posición en X
-    .new_y(posy)  // Salida de la nueva posición en Y
-  );
- 
-  
-  NumerosBuscaminas numeros_busca_minas (
-    .x(x1),
-    .y(y1),
-    .numero(3'b001), // Ejemplo: Muestra el número 1 en la casilla actual
-   .red(red_output), // Salida temporal de color rojo
-    .green(green_output), // Salida temporal de color verde
-    .blue(blue_output) // Salida temporal de color azul
-  );
-
- 
   videoGen videogen(x, y, red, green, blue);
 
 endmodule

@@ -3,99 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'ClockDivider:divider|vgaclk'
-Slack : -2.249
-TNS   : -57.454
+Slack : -2.219
+TNS   : -51.384
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -1.082
-TNS   : -1.815
+Slack : -1.736
+TNS   : -2.219
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.369
+Slack : 0.519
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'ClockDivider:divider|vgaclk'
-Slack : 0.646
+Slack : 0.666
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.807
-TNS   : -4.135
+Slack : -0.836
+TNS   : -2.814
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ClockDivider:divider|vgaclk'
 Slack : -0.394
-TNS   : -14.050
+TNS   : -12.520
 
 Type  : Slow 1100mV 0C Model Setup 'ClockDivider:divider|vgaclk'
-Slack : -2.147
-TNS   : -55.614
+Slack : -2.305
+TNS   : -51.642
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -1.062
-TNS   : -1.838
+Slack : -1.666
+TNS   : -2.141
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.374
+Slack : 0.497
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'ClockDivider:divider|vgaclk'
-Slack : 0.593
+Slack : 0.656
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.815
-TNS   : -4.263
+Slack : -0.837
+TNS   : -2.862
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ClockDivider:divider|vgaclk'
 Slack : -0.394
-TNS   : -13.941
+TNS   : -12.318
 
 Type  : Fast 1100mV 85C Model Setup 'ClockDivider:divider|vgaclk'
-Slack : -0.966
-TNS   : -24.261
+Slack : -0.979
+TNS   : -21.589
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -0.429
-TNS   : -0.429
+Slack : -0.917
+TNS   : -0.925
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.135
+Slack : 0.276
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'ClockDivider:divider|vgaclk'
-Slack : 0.301
+Slack : 0.344
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.702
-TNS   : -3.164
+Slack : -0.738
+TNS   : -2.215
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ClockDivider:divider|vgaclk'
-Slack : 0.143
+Slack : 0.103
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'ClockDivider:divider|vgaclk'
-Slack : -0.830
-TNS   : -21.061
+Slack : -0.900
+TNS   : -19.326
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -0.339
-TNS   : -0.339
+Slack : -0.759
+TNS   : -0.759
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.119
+Slack : 0.247
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'ClockDivider:divider|vgaclk'
-Slack : 0.260
+Slack : 0.309
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.690
-TNS   : -3.116
+Slack : -0.705
+TNS   : -2.105
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ClockDivider:divider|vgaclk'
-Slack : 0.151
+Slack : 0.119
 TNS   : 0.000
 
 ------------------------------------------------------------
