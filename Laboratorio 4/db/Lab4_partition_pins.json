@@ -122,6 +122,10 @@
 				{
 					"name" : "clk",
 					"strict" : false
+				},
+				{
+					"name" : "btn_reset",
+					"strict" : false
 				}
 			]
 		}

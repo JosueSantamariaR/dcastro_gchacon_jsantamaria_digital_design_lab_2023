@@ -85,6 +85,7 @@ endmodule
 module videoGen(
   input logic [9:0] x,
   input logic [9:0] y,
+  input logic btn_reset, // Entrada del botón para restablecer
   output logic [7:0] red,
   output logic [7:0] green,
   output logic [7:0] blue
@@ -108,6 +109,14 @@ module videoGen(
   // Calcula las coordenadas relativas al tablero centrado
   int rel_x;
   int rel_y;
+
+  // Variable para controlar la visibilidad del cuadro negro
+  logic show_black_box;
+
+  always_ff @(posedge btn_reset) begin
+    // Al presionar el botón, restablece la visibilidad del cuadro negro
+    show_black_box <= !show_black_box;
+  end
 
   always_comb begin
     // Calcula las coordenadas relativas al tablero centrado
@@ -134,8 +143,8 @@ module videoGen(
       blue = background_color;
     end
 
-    // Agrega un cuadro negro sobre la casilla actual
-    if (rel_x >= 0 && rel_x < CELL_WIDTH && rel_y >= 0 && rel_y < CELL_HEIGHT) begin
+    // Agrega un cuadro negro sobre la casilla actual si show_black_box es 1
+    if (show_black_box && rel_x >= 0 && rel_x < CELL_WIDTH && rel_y >= 0 && rel_y < CELL_HEIGHT) begin
       red = 8'b00000000; // Negro
       green = 8'b00000000; // Negro
       blue = 8'b00000000; // Negro
@@ -144,8 +153,9 @@ module videoGen(
 endmodule
 
 
+
 module vga(
-  input logic clk, key0, key1, key2, key3,
+  input logic clk, btn_reset, key1, key2, key3,
   output logic vgaclk, // 25.175 MHz VGA clock
   output logic hsync, vsync,
   output logic sync_b, blank_b,
@@ -165,7 +175,7 @@ module vga(
   );
 
   vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
-  videoGen videogen(x, y, red, green, blue);
+  videoGen videogen(x, y, btn_reset, red, green, blue);
 
 endmodule
 
