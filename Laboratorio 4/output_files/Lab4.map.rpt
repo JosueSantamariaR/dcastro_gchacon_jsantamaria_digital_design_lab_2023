@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4
-Tue Oct 10 01:05:59 2023
+Tue Oct 10 01:23:35 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -48,7 +48,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 10 01:05:59 2023          ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 10 01:23:35 2023          ;
 ; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                   ; Lab4                                           ;
 ; Top-level Entity Name           ; vga                                            ;
@@ -200,13 +200,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 286                      ;
+; Estimate of Logic utilization (ALMs needed) ; 287                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 548                      ;
+; Combinational ALUT usage for logic          ; 547                      ;
 ;     -- 7 input functions                    ; 1                        ;
-;     -- 6 input functions                    ; 22                       ;
-;     -- 5 input functions                    ; 75                       ;
-;     -- 4 input functions                    ; 118                      ;
+;     -- 6 input functions                    ; 24                       ;
+;     -- 5 input functions                    ; 74                       ;
+;     -- 4 input functions                    ; 116                      ;
 ;     -- <=3 input functions                  ; 332                      ;
 ;                                             ;                          ;
 ; Dedicated logic registers                   ; 55                       ;
@@ -215,10 +215,10 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Total DSP Blocks                            ; 4                        ;
 ;                                             ;                          ;
-; Maximum fan-out node                        ; videoGen:videogen|Add1~1 ;
-; Maximum fan-out                             ; 40                       ;
-; Total fan-out                               ; 1959                     ;
-; Average fan-out                             ; 2.90                     ;
+; Maximum fan-out node                        ; videoGen:videogen|Add0~1 ;
+; Maximum fan-out                             ; 43                       ;
+; Total fan-out                               ; 1958                     ;
+; Average fan-out                             ; 2.91                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -227,10 +227,10 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name     ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |vga                                     ; 548 (0)             ; 55 (0)                    ; 0                 ; 4          ; 34   ; 0            ; |vga                                                                                                                ; vga             ; work         ;
+; |vga                                     ; 547 (0)             ; 55 (0)                    ; 0                 ; 4          ; 34   ; 0            ; |vga                                                                                                                ; vga             ; work         ;
 ;    |ClockDivider:divider|                ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|ClockDivider:divider                                                                                           ; ClockDivider    ; work         ;
 ;    |vgaController:vgaCont|               ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont                                                                                          ; vgaController   ; work         ;
-;    |videoGen:videogen|                   ; 517 (113)           ; 33 (33)                   ; 0                 ; 4          ; 0    ; 0            ; |vga|videoGen:videogen                                                                                              ; videoGen        ; work         ;
+;    |videoGen:videogen|                   ; 516 (112)           ; 33 (33)                   ; 0                 ; 4          ; 0    ; 0            ; |vga|videoGen:videogen                                                                                              ; videoGen        ; work         ;
 ;       |lpm_divide:Mod0|                  ; 215 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
 ;          |lpm_divide_hho:auto_generated| ; 215 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod0|lpm_divide_hho:auto_generated                                                ; lpm_divide_hho  ; work         ;
 ;             |abs_divider_nbg:divider|    ; 215 (15)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod0|lpm_divide_hho:auto_generated|abs_divider_nbg:divider                        ; abs_divider_nbg ; work         ;
@@ -363,7 +363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 35                          ;
-; arriav_lcell_comb     ; 549                         ;
+; arriav_lcell_comb     ; 548                         ;
 ;     arith             ; 297                         ;
 ;         0 data inputs ; 35                          ;
 ;         1 data inputs ; 139                         ;
@@ -372,18 +372,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 64                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 251                         ;
+;     normal            ; 250                         ;
 ;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 82                          ;
 ;         3 data inputs ; 15                          ;
-;         4 data inputs ; 54                          ;
-;         5 data inputs ; 75                          ;
-;         6 data inputs ; 22                          ;
+;         4 data inputs ; 52                          ;
+;         5 data inputs ; 74                          ;
+;         6 data inputs ; 24                          ;
 ; arriav_mac            ; 4                           ;
 ; boundary_port         ; 34                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 34.30                       ;
-; Average LUT depth     ; 23.93                       ;
+; Average LUT depth     ; 23.90                       ;
 +-----------------------+-----------------------------+
 
 
@@ -402,7 +402,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Oct 10 01:05:48 2023
+    Info: Processing started: Tue Oct 10 01:23:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -465,15 +465,15 @@ Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key1" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 162
     Warning (15610): No output dependent on input pin "key2" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 162
     Warning (15610): No output dependent on input pin "key3" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 162
-Info (21057): Implemented 619 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 618 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 581 logic cells
+    Info (21061): Implemented 580 logic cells
     Info (21062): Implemented 4 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Tue Oct 10 01:05:59 2023
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Tue Oct 10 01:23:35 2023
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
 
 

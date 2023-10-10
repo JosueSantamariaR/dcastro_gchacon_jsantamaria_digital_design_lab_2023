@@ -113,13 +113,13 @@ module videoGen(
   // Variable para controlar la visibilidad del cuadro negro
   logic show_black_box;
   
-  // Variable para controlar la posición de la casilla actual en el eje Y
-  int current_y_position = 0;
+  // Variable para controlar la posición de la casilla actual en el eje X
+  int current_x_position = 0;
 
   always_ff @(posedge btn_reset) begin
     // Al presionar el botón, restablece la visibilidad del cuadro negro y aumenta la posición de la casilla
     show_black_box <= !show_black_box;
-    current_y_position <= current_y_position + 1;
+    current_x_position <= current_x_position + 1;
   end
 
   always_comb begin
@@ -148,7 +148,7 @@ module videoGen(
     end
 
     // Agrega un cuadro negro sobre la casilla actual si show_black_box es 1
-    if (show_black_box && rel_x >= 0 && rel_x < CELL_WIDTH && rel_y >= current_y_position * CELL_HEIGHT && rel_y < (current_y_position + 1) * CELL_HEIGHT) begin
+    if (show_black_box && rel_y >= 0 && rel_y < CELL_HEIGHT && rel_x >= current_x_position * CELL_WIDTH && rel_x < (current_x_position + 1) * CELL_WIDTH) begin
       red = 8'b00000000; // Negro
       green = 8'b00000000; // Negro
       blue = 8'b00000000; // Negro
