@@ -28,15 +28,17 @@ module tablero(
 	initial begin
 		for (int i = 0; i < 8; i++) begin
 			for (int j = 0; j < 8; j++) begin
-				game_board[i][j].mine = 0; // Supongamos que el PRNG tiene una salida llamada random_output
+				game_board[i][j].mine = 0;
 				game_board[i][j].revealed = 0;
 				game_board[i][j].adjacent = 0;
 			end
 		end
+		$display("INICIO TERMINADO"); 
 	end
 	 
 	 
 	 always @(posedge clk) begin
+		$display("entró al posedge clk");
 		if(contador < total_mines) begin
 			if (!game_board[random_row][random_col].mine && random_row >= 0) begin
 				game_board[random_row][random_col].mine = 1;
@@ -48,6 +50,10 @@ module tablero(
 		
 		
 	 end
+	 
+	
+		
+	 
 	 
 	 
 	/* 
