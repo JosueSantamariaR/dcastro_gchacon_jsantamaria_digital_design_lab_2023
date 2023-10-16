@@ -1,30 +1,49 @@
 module busca_minas (
-	input logic mov,
-	input logic sel_flag,
-	input logic sel,
-	input wire clk,
-	input wire rst,
-	input logic [3:0] total_mines,
-	output reg [2:0] random_row, 
-	output reg [2:0] random_col
+    input logic mov_rigth,
+    input logic mov_left,
+    input logic sel_flag,
+    input logic sel,
+    input wire clk,
+    input wire rst,
+    input logic [3:0] total_mines
 );
 
- logic [2:0] state, next_state;
- //logic test = 1;
- logic bomb = 0;
- logic win = 0;
- logic put_mine = 0;
- 
- 
- tablero tab_ins (
+logic [2:0] state, next_state;
+logic bomb = 0;
+logic win = 0;
+logic mov = 0;
+logic put_mine = 0;
+
+reg [2:0] random_row;
+reg [2:0] random_col;
+
+/* 
+typedef struct {
+		bit mine;   
+		bit revealed;
+		bit[3:0] adjacent;
+	} cell_t;
+	
+cell_t tablero_de_juego[8][8];
+*/
+
+RandomGenerator r_inst (
+    .clk(clk),
+    .rst(rst),
+    .random_row(random_row),
+    .random_column(random_col)
+);
+
+// Instanciar el módulo tablero
+tablero tab_ins (
     .clk(clk),
     .rst(rst),
     .total_mines(total_mines),
-	 .put_mine(put_mine),
+    .put_mine(put_mine),
     .random_row(random_row),
     .random_col(random_col)
-  );
-	
+);
+  	
 
 // Actual state logic
   always_ff @(posedge clk or posedge rst)
