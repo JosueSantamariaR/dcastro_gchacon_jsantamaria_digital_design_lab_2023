@@ -2,93 +2,101 @@ module tablero(
 	input wire clk,       
    input wire rst,      
 	input logic [3:0] total_mines,
-	input logic put_mine,
 	input reg [2:0] random_row, 
-	input reg [2:0] random_col
+	input reg [2:0] random_col,
+	output logic game_board_mine[8][8],
+	output logic game_board_revealed[8][8],
+	output int game_board_adjacent[8][8]
 );
 	 
 	int contador = 0;
-	int temporal = 0;
+	//int temporal = 0;
 	logic calcular_ad = 0;
-	 
-	typedef struct {
-		bit mine;   
-		bit revealed;
-		bit[3:0] adjacent;
-	} cell_t;
-	
 
-	cell_t game_board[8][8];
+	reg total_mine_changed = 0;
+	reg prev_total_mines = 0;
+	 
 	
 	initial begin
+		prev_total_mines = total_mines;
+		$display("AAAAAAAAAAA:");
+		$display(prev_total_mines);
 		for (int i = 0; i < 8; i++) begin
 			for (int j = 0; j < 8; j++) begin
-				game_board[i][j].mine = 0; 
-				game_board[i][j].revealed = 0;
-				game_board[i][j].adjacent = 0;
+				game_board_mine[i][j] = 0; 
+				game_board_revealed[i][j] = 0;
+				game_board_adjacent[i][j] = 0;
 			end
 		end
-		$display("tablero en blanco");
-		temporal = total_mines;
+		$display("tablero en blanco!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		//$display(total_mines); 
 	end
-	 
-	 always @(total_mines)begin
-		for (int i = 0; i < 8; i++) begin
-			for (int j = 0; j < 8; j++) begin
-				game_board[i][j].mine = 0; 
-				game_board[i][j].revealed = 0;
-				game_board[i][j].adjacent = 0;
-			end
-		end
-		$display("tablero en blanco");
-		
-		$display("cambiaron las total mines");
-		contador = 0;
-		calcular_ad = 0;
-	 end
+	
 	 
 	 always @(posedge clk) begin
+		//verficar si totalmines ha cambiado
+		
+		if (total_mines != prev_total_mines && prev_total_mines >= 0 && total_mines >= 0) begin
+			$display("las minas cambiaroooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooon");
+			total_mine_changed = 1;
+			prev_total_mines = total_mines;
+		end
+	
+	
+		//colocar las minas
 		if(contador < total_mines) begin
-			if (!game_board[random_row][random_col].mine && random_row >= 0) begin
-				game_board[random_row][random_col].mine = 1;
+			if (!game_board_mine[random_row][random_col] && random_row >= 0) begin
+				game_board_mine[random_row][random_col] = 1;
 				$display("mina colocada en fila: %0d columna: %0d",random_row, random_col);
 				contador = contador +1;
 			end
 		end
-		
+		//calcular ads
 		if(contador == (total_mines) && ~calcular_ad)begin
 			$display("nos fuimos a calcular!");
 			calcular_ad = 1;		
 		end
-	 end
-
-	
-	always @( posedge calcular_ad) begin
-	$display("calculando adyacencias");
-		for (int i = 0; i < 8; i++) begin
-			for (int j = 0; j < 8; j++) begin
-				if (!game_board[i][j].mine) begin
-					automatic int adjacent_mines = 0;
-					for (int x = -1; x <= 1; x++) begin
-						for (int y = -1; y <= 1; y++) begin
-							if (i + x >= 0 && i + x < 8 && j + y >= 0 && j + y < 8) begin
-								adjacent_mines += game_board[i + x][j + y].mine;
-							end
-						end
-					end
-					game_board[i][j].adjacent = adjacent_mines;
+		
+		//cuando hay cambio de minas para recalcular el tablero
+		if(total_mine_changed) begin
+			for (int i = 0; i < 8; i++) begin
+				for (int j = 0; j < 8; j++) begin
+					game_board_mine[i][j] = 0; 
+					game_board_revealed[i][j] = 0;
+					game_board_adjacent[i][j] = 0;
 				end
 			end
+			$display("tablero en blanco");
+			$display("cambiaron las total mines");
+			contador = 0;
+			calcular_ad = 0;
+			total_mine_changed = 0;
 		end
-		//printing the matrix
-		for (int row = 0; row < 8; row = row + 1) begin
-			for (int col = 0; col < 8; col = col + 1) begin
-                    $display("matrix[%0d][%0d]", row, col);
-						  $display(game_board[row][col].adjacent);
+		
+		//calculo de adyacentes
+		
+		if(calcular_ad) begin
+			$display("calculando adyacencias");
+			for (int i = 0; i < 8; i++) begin
+				for (int j = 0; j < 8; j++) begin
+					if (!game_board_mine[i][j]) begin
+						automatic int adjacent_mines = 0;
+						for (int x = -1; x <= 1; x++) begin
+							for (int y = -1; y <= 1; y++) begin
+								if (i + x >= 0 && i + x < 8 && j + y >= 0 && j + y < 8) begin
+									adjacent_mines += game_board_mine[i + x][j + y];
+								end
+							end
+						end
+						game_board_adjacent[i][j] = adjacent_mines;
+					end
+				end
 			end
-		end
-	$display("adyacencias calculadas");
-	end
+			
+			$display("adyacencias calculadas");
+			calcular_ad = 0;
+			contador = contador + 1;
+			end
+	 end
 
 endmodule

@@ -1,4 +1,5 @@
 module busca_minas (
+	 input logic mov,
     input logic mov_rigth,
     input logic mov_left,
     input logic sel_flag,
@@ -8,24 +9,27 @@ module busca_minas (
     input logic [3:0] total_mines
 );
 
+/*
+,
+	 output logic game_board_mine[8][8],
+	 output logic game_board_revealed[8][8],
+	 output int game_board_adjacent[8][8]
+
+*/
+int x = 0;
+int y = 0;
+
 logic [2:0] state, next_state;
 logic bomb = 0;
 logic win = 0;
-logic mov = 0;
-logic put_mine = 0;
 
 reg [2:0] random_row;
 reg [2:0] random_col;
 
-/* 
-typedef struct {
-		bit mine;   
-		bit revealed;
-		bit[3:0] adjacent;
-	} cell_t;
-	
-cell_t tablero_de_juego[8][8];
-*/
+logic game_board_mine[8][8];
+logic game_board_revealed[8][8];
+int game_board_adjacent[8][8];
+
 
 RandomGenerator r_inst (
     .clk(clk),
@@ -35,16 +39,19 @@ RandomGenerator r_inst (
 );
 
 // Instanciar el módulo tablero
+
+
 tablero tab_ins (
     .clk(clk),
     .rst(rst),
     .total_mines(total_mines),
-    .put_mine(put_mine),
     .random_row(random_row),
-    .random_col(random_col)
+    .random_col(random_col),
+	 .game_board_mine(game_board_mine),
+	 .game_board_revealed(game_board_revealed),
+	 .game_board_adjacent(game_board_adjacent)
 );
-  	
-
+ 
 // Actual state logic
   always_ff @(posedge clk or posedge rst)
 	if(rst) state = 3'b000;
@@ -93,21 +100,43 @@ tablero tab_ins (
   end
   
   //Output Logic (To be able to use if and else)
-  always @(next_state) begin
-		/*
-		if(test)begin
-		test=0;
-		$display("prueba");
+   
+  always @(mov_rigth or mov_left)begin
+  $display("HAY MOVIMIENTO"); 
+	if(mov_rigth)begin
+		if(x == 7)begin
+			x = 0;
+			$display("posicion en x es: %0d", x);
 		end else begin
-		$display("OMG SIRVE EL ELSE");
+			x = x + 1;
+			$display("posicion en x es: %0d", x);
 		end
-  */
-  
+	end
+	if(mov_left)begin
+		if(y == 7)begin
+			y = 0;
+			$display("posicion en y es: %0d", y);
+		end else begin
+			y = y + 1;
+			$display("posicion en y es: %0d", y);
+		end
+	
+	end
   end
-  
-
+endmodule 
+/*
+  always @(next_state) begin
+	//printing the matrix
+	$display("ya esta el maldito tablero en la fsm!");
+			for (int row = 0; row < 8; row = row + 1) begin
+				for (int col = 0; col < 8; col = col + 1) begin
+					$display("matrix[%0d][%0d]", row, col);
+					$display(game_board_mine[row][col]);
+				end
+			end
+  end
+  */
   // Output logic just assigns 
 
 //assign msj_f = msj;
 
-endmodule
