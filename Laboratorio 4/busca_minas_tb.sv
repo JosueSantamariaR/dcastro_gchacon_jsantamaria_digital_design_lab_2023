@@ -1,7 +1,6 @@
 module busca_minas_tb;
-	logic mov = 0;
-	logic mov_rigth = 0;
-	logic mov_left = 0;
+	logic mov_right = 0;
+	logic mov_down = 0;
 	logic sel_flag = 0;
 	logic sel = 0;
 	reg clk;
@@ -9,9 +8,8 @@ module busca_minas_tb;
 	logic [5:0] total_mines;
 	 
 	busca_minas busca_minas_inst (
-	.mov(mov),
-    .mov_rigth(mov_rigth),
-	 .mov_left(mov_left),
+    .mov_right(mov_right),
+	 .mov_down(mov_down),
     .sel_flag(sel_flag),
     .sel(sel),
     .clk(clk),
@@ -35,65 +33,27 @@ module busca_minas_tb;
     // Espera un tiempo para observar la secuencia de números aleatorios generada
     #150;
 	 $display("-------------------------------------------------------------------------------");
-	 mov=1;
-	 #100;
-	 mov=0;
-	 
-	 mov_rigth=1;
-	 mov_left=1;
 	 #10;
-	 mov_rigth=0;
-	 mov_left=0;
-	 #10;
-	 
-	 mov_rigth=1;
-	 mov_left=1;
-	 #10;
-	 mov_rigth=0;
-	 mov_left=0;
-	 #10;
-	 
-	 mov_rigth=1;
-	 mov_left=1;
-	 #10;
-	 mov_rigth=0;
-	 mov_left=0;
-	 #10;
-	 
-	 mov_rigth=1;
-	 mov_left=1;
-	 #10;
-	 mov_rigth=0;
-	 mov_left=0;
-	 #10;
-	 
-	 mov_rigth=1;
-	 mov_left=1;
-	 #10;
-	 mov_rigth=0;
-	 mov_left=0;
-	 #10;
-	 
-	 mov_rigth=1;
-	 mov_left=1;
-	 #10;
-	 mov_rigth=0;
-	 mov_left=0;
-	 #10;
-	 
-	 mov_rigth=1;
-	 mov_left=1;
-	 #10;
-	 mov_rigth=0;
-	 mov_left=0;
-	 #10;
-	 
-	 mov_rigth=1;
-	 mov_left=1;
-	 #10;
-	 mov_rigth=0;
-	 mov_left=0;
-	 #10;
+		mov_right = 0;
+		#10;
+		mov_down = 0;
+		#10;
+		mov_right = 1;
+		#10;
+		mov_right = 0;
+		#10;
+		mov_right = 1;
+		#10;
+		mov_right = 0;
+		#10;
+		mov_right = 1;
+		#10;
+		mov_right = 0;
+		#10;
+		sel = 1;
+		#10;
+		sel=0;
+		
 	 /*
 	 total_mines = 5;
     #150;
@@ -108,3 +68,4 @@ module busca_minas_tb;
   // Puedes agregar más tareas o funciones de prueba aquí
 
 endmodule
+

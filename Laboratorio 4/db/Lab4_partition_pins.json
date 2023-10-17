@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "gameoverdisp",
+					"strict" : false
+				},
+				{
 					"name" : "hsync",
 					"strict" : false
 				},
@@ -124,15 +128,43 @@
 					"strict" : false
 				},
 				{
-					"name" : "btn_right",
+					"name" : "btn2",
 					"strict" : false
 				},
 				{
-					"name" : "btn_down",
+					"name" : "rst",
 					"strict" : false
 				},
 				{
-					"name" : "btn_select",
+					"name" : "total_mines[5]",
+					"strict" : false
+				},
+				{
+					"name" : "total_mines[4]",
+					"strict" : false
+				},
+				{
+					"name" : "total_mines[3]",
+					"strict" : false
+				},
+				{
+					"name" : "total_mines[2]",
+					"strict" : false
+				},
+				{
+					"name" : "total_mines[1]",
+					"strict" : false
+				},
+				{
+					"name" : "total_mines[0]",
+					"strict" : false
+				},
+				{
+					"name" : "btn1",
+					"strict" : false
+				},
+				{
+					"name" : "btn0",
 					"strict" : false
 				}
 			]

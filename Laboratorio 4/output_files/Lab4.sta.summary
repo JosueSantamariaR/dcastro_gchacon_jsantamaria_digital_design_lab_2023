@@ -2,244 +2,244 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'btn_select'
-Slack : -4.766
-TNS   : -286.772
-
-Type  : Slow 1100mV 85C Model Setup 'btn_right'
-Slack : -3.069
-TNS   : -95.240
-
-Type  : Slow 1100mV 85C Model Setup 'btn_down'
-Slack : -2.814
-TNS   : -86.434
-
 Type  : Slow 1100mV 85C Model Setup 'ClockDivider:divider|vgaclk'
-Slack : -2.016
-TNS   : -44.475
+Slack : -6.891
+TNS   : -702.543
+
+Type  : Slow 1100mV 85C Model Setup 'btn2'
+Slack : -4.782
+TNS   : -282.469
+
+Type  : Slow 1100mV 85C Model Setup 'btn1'
+Slack : -3.164
+TNS   : -107.782
+
+Type  : Slow 1100mV 85C Model Setup 'btn0'
+Slack : -2.914
+TNS   : -97.675
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -1.038
-TNS   : -1.307
+Slack : -0.997
+TNS   : -2.127
 
-Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.357
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'btn_down'
-Slack : 0.382
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'btn_right'
-Slack : 0.382
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'ClockDivider:divider|vgaclk'
-Slack : 0.557
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'btn_select'
-Slack : 1.434
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.757
-TNS   : -2.533
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn_select'
-Slack : -0.394
-TNS   : -33.266
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn_right'
-Slack : -0.394
-TNS   : -23.025
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn_down'
-Slack : -0.394
-TNS   : -21.992
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ClockDivider:divider|vgaclk'
-Slack : -0.394
-TNS   : -12.151
-
-Type  : Slow 1100mV 0C Model Setup 'btn_select'
-Slack : -4.567
-TNS   : -273.991
-
-Type  : Slow 1100mV 0C Model Setup 'btn_right'
-Slack : -3.014
-TNS   : -93.515
-
-Type  : Slow 1100mV 0C Model Setup 'btn_down'
-Slack : -2.765
-TNS   : -85.208
-
-Type  : Slow 1100mV 0C Model Setup 'ClockDivider:divider|vgaclk'
-Slack : -2.007
-TNS   : -43.967
-
-Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -1.004
-TNS   : -1.241
-
-Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.331
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'btn_right'
+Type  : Slow 1100mV 85C Model Hold 'btn1'
 Slack : 0.381
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'btn_down'
-Slack : 0.382
+Type  : Slow 1100mV 85C Model Hold 'ClockDivider:divider|vgaclk'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'btn0'
+Slack : 0.535
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.590
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'btn2'
+Slack : 1.627
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ClockDivider:divider|vgaclk'
+Slack : -0.598
+TNS   : -104.243
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.475
+TNS   : -2.602
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn2'
+Slack : -0.394
+TNS   : -33.242
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn1'
+Slack : -0.394
+TNS   : -22.456
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn0'
+Slack : -0.394
+TNS   : -22.082
+
+Type  : Slow 1100mV 0C Model Setup 'ClockDivider:divider|vgaclk'
+Slack : -6.791
+TNS   : -690.603
+
+Type  : Slow 1100mV 0C Model Setup 'btn2'
+Slack : -4.592
+TNS   : -269.292
+
+Type  : Slow 1100mV 0C Model Setup 'btn1'
+Slack : -3.133
+TNS   : -106.987
+
+Type  : Slow 1100mV 0C Model Setup 'btn0'
+Slack : -2.936
+TNS   : -96.750
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -0.973
+TNS   : -2.070
+
+Type  : Slow 1100mV 0C Model Hold 'btn1'
+Slack : 0.381
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'ClockDivider:divider|vgaclk'
-Slack : 0.517
+Slack : 0.469
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Hold 'btn_select'
-Slack : 1.288
+Type  : Slow 1100mV 0C Model Hold 'btn0'
+Slack : 0.547
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.765
-TNS   : -2.631
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.573
+TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn_select'
-Slack : -0.394
-TNS   : -36.627
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn_right'
-Slack : -0.394
-TNS   : -21.401
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn_down'
-Slack : -0.394
-TNS   : -20.110
+Type  : Slow 1100mV 0C Model Hold 'btn2'
+Slack : 1.489
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ClockDivider:divider|vgaclk'
+Slack : -0.609
+TNS   : -103.002
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.448
+TNS   : -2.523
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn2'
 Slack : -0.394
-TNS   : -12.190
+TNS   : -36.586
 
-Type  : Fast 1100mV 85C Model Setup 'btn_select'
-Slack : -2.292
-TNS   : -133.809
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn1'
+Slack : -0.394
+TNS   : -21.214
 
-Type  : Fast 1100mV 85C Model Setup 'btn_right'
-Slack : -1.387
-TNS   : -41.121
-
-Type  : Fast 1100mV 85C Model Setup 'btn_down'
-Slack : -1.169
-TNS   : -34.968
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn0'
+Slack : -0.394
+TNS   : -20.170
 
 Type  : Fast 1100mV 85C Model Setup 'ClockDivider:divider|vgaclk'
-Slack : -0.833
-TNS   : -18.181
+Slack : -3.885
+TNS   : -377.407
+
+Type  : Fast 1100mV 85C Model Setup 'btn2'
+Slack : -2.353
+TNS   : -131.649
+
+Type  : Fast 1100mV 85C Model Setup 'btn1'
+Slack : -1.455
+TNS   : -47.821
+
+Type  : Fast 1100mV 85C Model Setup 'btn0'
+Slack : -1.263
+TNS   : -40.922
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -0.399
-TNS   : -0.399
+Slack : -0.370
+TNS   : -0.450
 
-Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.141
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'btn_down'
-Slack : 0.204
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'btn_right'
-Slack : 0.204
+Type  : Fast 1100mV 85C Model Hold 'btn1'
+Slack : 0.205
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'ClockDivider:divider|vgaclk'
-Slack : 0.251
+Slack : 0.237
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'btn_select'
-Slack : 0.755
+Type  : Fast 1100mV 85C Model Hold 'btn0'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'btn2'
+Slack : 0.882
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.669
-TNS   : -1.968
+Slack : -0.445
+TNS   : -1.622
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn_down'
-Slack : -0.336
-TNS   : -10.805
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn1'
+Slack : -0.337
+TNS   : -11.628
 
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn_right'
-Slack : -0.323
-TNS   : -11.100
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn_select'
-Slack : -0.084
-TNS   : -5.092
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn0'
+Slack : -0.335
+TNS   : -11.556
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ClockDivider:divider|vgaclk'
-Slack : 0.067
-TNS   : 0.000
+Slack : -0.308
+TNS   : -8.703
 
-Type  : Fast 1100mV 0C Model Setup 'btn_select'
-Slack : -2.154
-TNS   : -126.306
-
-Type  : Fast 1100mV 0C Model Setup 'btn_right'
-Slack : -1.172
-TNS   : -34.519
-
-Type  : Fast 1100mV 0C Model Setup 'btn_down'
-Slack : -0.999
-TNS   : -29.876
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn2'
+Slack : -0.082
+TNS   : -5.106
 
 Type  : Fast 1100mV 0C Model Setup 'ClockDivider:divider|vgaclk'
-Slack : -0.748
-TNS   : -16.019
+Slack : -3.433
+TNS   : -334.137
+
+Type  : Fast 1100mV 0C Model Setup 'btn2'
+Slack : -2.172
+TNS   : -124.154
+
+Type  : Fast 1100mV 0C Model Setup 'btn1'
+Slack : -1.219
+TNS   : -39.970
+
+Type  : Fast 1100mV 0C Model Setup 'btn0'
+Slack : -1.054
+TNS   : -34.247
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -0.302
-TNS   : -0.302
+Slack : -0.283
+TNS   : -0.284
 
-Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.113
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'btn_right'
-Slack : 0.189
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'btn_down'
-Slack : 0.190
+Type  : Fast 1100mV 0C Model Hold 'btn1'
+Slack : 0.193
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'ClockDivider:divider|vgaclk'
-Slack : 0.221
+Slack : 0.200
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Hold 'btn_select'
-Slack : 0.665
+Type  : Fast 1100mV 0C Model Hold 'btn0'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'btn2'
+Slack : 0.794
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.656
-TNS   : -1.939
+Slack : -0.419
+TNS   : -1.490
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn_down'
-Slack : -0.318
-TNS   : -10.228
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn1'
+Slack : -0.323
+TNS   : -11.096
 
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn_right'
-Slack : -0.310
-TNS   : -10.651
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn_select'
-Slack : -0.084
-TNS   : -5.202
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn0'
+Slack : -0.319
+TNS   : -10.925
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ClockDivider:divider|vgaclk'
-Slack : 0.083
-TNS   : 0.000
+Slack : -0.268
+TNS   : -6.659
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn2'
+Slack : -0.085
+TNS   : -5.240
 
 ------------------------------------------------------------

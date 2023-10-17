@@ -1,5 +1,5 @@
-Analysis & Synthesis report for Lab4
-Mon Oct 16 20:09:22 2023
+Analysis & Elaboration report for Lab4
+Tue Oct 17 01:08:41 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -7,21 +7,13 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: vgaController:vgaCont
- 11. Parameter Settings for User Entity Instance: videoGen:videogen
- 12. Parameter Settings for Inferred Entity Instance: videoGen:videogen|lpm_divide:Mod0
- 13. Parameter Settings for Inferred Entity Instance: videoGen:videogen|lpm_divide:Mod1
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: vgaController:vgaCont
+  5. Parameter Settings for User Entity Instance: videoGen:videogen
+  6. Analysis & Elaboration Settings
+  7. Port Connectivity Checks: "busca_minas:busca_minas_inst|tablero:tab_ins"
+  8. Analysis & Elaboration Messages
 
 
 
@@ -45,36 +37,81 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 16 20:09:21 2023          ;
-; Quartus Prime Version           ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
-; Revision Name                   ; Lab4                                           ;
-; Top-level Entity Name           ; vga                                            ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 150                                            ;
-; Total pins                      ; 33                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 16                                             ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Oct 17 01:08:41 2023          ;
+; Quartus Prime Version         ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
+; Revision Name                 ; Lab4                                           ;
+; Top-level Entity Name         ; minesweeper                                    ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vgaController:vgaCont ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; HACTIVE        ; 640   ; Signed Integer                            ;
+; HFP            ; 16    ; Signed Integer                            ;
+; HSYN           ; 96    ; Signed Integer                            ;
+; HBP            ; 48    ; Signed Integer                            ;
+; HMAX           ; 800   ; Signed Integer                            ;
+; VBP            ; 32    ; Signed Integer                            ;
+; VACTIVE        ; 480   ; Signed Integer                            ;
+; VFP            ; 11    ; Signed Integer                            ;
+; VSYN           ; 2     ; Signed Integer                            ;
+; VMAX           ; 525   ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: videoGen:videogen ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; NUM_COLUMNS    ; 8     ; Signed Integer                        ;
+; NUM_ROWS       ; 8     ; Signed Integer                        ;
+; SCREEN_WIDTH   ; 637   ; Signed Integer                        ;
+; SCREEN_HEIGHT  ; 477   ; Signed Integer                        ;
+; CELL_WIDTH     ; 79    ; Signed Integer                        ;
+; CELL_HEIGHT    ; 59    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; vga                ; Lab4               ;
+; Top-level entity name                                                           ; minesweeper        ; Lab4               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,320 +192,137 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "busca_minas:busca_minas_inst|tablero:tab_ins"                                                      ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                             ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
+; game_board_revealed ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; game_board_adjacent ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; ClockDivider.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/ClockDivider.sv        ;         ;
-; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv                 ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                                             ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc                                                                            ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                                        ;         ;
-; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                                                             ;         ;
-; db/lpm_divide_hho.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_divide_hho.tdf  ;         ;
-; db/abs_divider_nbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/abs_divider_nbg.tdf ;         ;
-; db/alt_u_div_uve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/alt_u_div_uve.tdf   ;         ;
-; db/lpm_abs_nn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_abs_nn9.tdf     ;         ;
-; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_abs_4p9.tdf     ;         ;
-; db/lpm_divide_gho.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_divide_gho.tdf  ;         ;
-; db/abs_divider_mbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/abs_divider_mbg.tdf ;         ;
-; db/alt_u_div_sve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/alt_u_div_sve.tdf   ;         ;
-; db/lpm_abs_mn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_abs_mn9.tdf     ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimate of Logic utilization (ALMs needed) ; 398              ;
-;                                             ;                  ;
-; Combinational ALUT usage for logic          ; 751              ;
-;     -- 7 input functions                    ; 1                ;
-;     -- 6 input functions                    ; 31               ;
-;     -- 5 input functions                    ; 163              ;
-;     -- 4 input functions                    ; 139              ;
-;     -- <=3 input functions                  ; 417              ;
-;                                             ;                  ;
-; Dedicated logic registers                   ; 150              ;
-;                                             ;                  ;
-; I/O pins                                    ; 33               ;
-;                                             ;                  ;
-; Total DSP Blocks                            ; 16               ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; btn_select~input ;
-; Maximum fan-out                             ; 64               ;
-; Total fan-out                               ; 2977             ;
-; Average fan-out                             ; 3.03             ;
-+---------------------------------------------+------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                      ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name     ; Library Name ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |vga                                     ; 751 (0)             ; 150 (0)                   ; 0                 ; 16         ; 33   ; 0            ; |vga                                                                                                                ; vga             ; work         ;
-;    |ClockDivider:divider|                ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|ClockDivider:divider                                                                                           ; ClockDivider    ; work         ;
-;    |vgaController:vgaCont|               ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont                                                                                          ; vgaController   ; work         ;
-;    |videoGen:videogen|                   ; 720 (322)           ; 128 (128)                 ; 0                 ; 16         ; 0    ; 0            ; |vga|videoGen:videogen                                                                                              ; videoGen        ; work         ;
-;       |lpm_divide:Mod0|                  ; 211 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
-;          |lpm_divide_hho:auto_generated| ; 211 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod0|lpm_divide_hho:auto_generated                                                ; lpm_divide_hho  ; work         ;
-;             |abs_divider_nbg:divider|    ; 211 (11)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod0|lpm_divide_hho:auto_generated|abs_divider_nbg:divider                        ; abs_divider_nbg ; work         ;
-;                |alt_u_div_uve:divider|   ; 189 (189)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod0|lpm_divide_hho:auto_generated|abs_divider_nbg:divider|alt_u_div_uve:divider  ; alt_u_div_uve   ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod0|lpm_divide_hho:auto_generated|abs_divider_nbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9     ; work         ;
-;       |lpm_divide:Mod1|                  ; 187 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod1                                                                              ; lpm_divide      ; work         ;
-;          |lpm_divide_gho:auto_generated| ; 187 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod1|lpm_divide_gho:auto_generated                                                ; lpm_divide_gho  ; work         ;
-;             |abs_divider_mbg:divider|    ; 187 (11)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod1|lpm_divide_gho:auto_generated|abs_divider_mbg:divider                        ; abs_divider_mbg ; work         ;
-;                |alt_u_div_sve:divider|   ; 165 (165)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod1|lpm_divide_gho:auto_generated|abs_divider_mbg:divider|alt_u_div_sve:divider  ; alt_u_div_sve   ; work         ;
-;                |lpm_abs_4p9:my_abs_num|  ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videogen|lpm_divide:Mod1|lpm_divide_gho:auto_generated|abs_divider_mbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9     ; work         ;
-+------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary    ;
-+-----------------------------------+-------------+
-; Statistic                         ; Number Used ;
-+-----------------------------------+-------------+
-; Two Independent 18x18             ; 8           ;
-; Independent 18x18 plus 36         ; 8           ;
-; Total number of DSP blocks        ; 16          ;
-;                                   ;             ;
-; Fixed Point Unsigned Multiplier   ; 8           ;
-; Fixed Point Mixed Sign Multiplier ; 8           ;
-+-----------------------------------+-------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 150   ;
-; Number of registers using Synchronous Clear  ; 84    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: vgaController:vgaCont ;
-+----------------+-------+-------------------------------------------+
-; Parameter Name ; Value ; Type                                      ;
-+----------------+-------+-------------------------------------------+
-; HACTIVE        ; 640   ; Signed Integer                            ;
-; HFP            ; 16    ; Signed Integer                            ;
-; HSYN           ; 96    ; Signed Integer                            ;
-; HBP            ; 48    ; Signed Integer                            ;
-; HMAX           ; 800   ; Signed Integer                            ;
-; VBP            ; 32    ; Signed Integer                            ;
-; VACTIVE        ; 480   ; Signed Integer                            ;
-; VFP            ; 11    ; Signed Integer                            ;
-; VSYN           ; 2     ; Signed Integer                            ;
-; VMAX           ; 525   ; Signed Integer                            ;
-+----------------+-------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: videoGen:videogen ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; NUM_COLUMNS    ; 8     ; Signed Integer                        ;
-; NUM_ROWS       ; 8     ; Signed Integer                        ;
-; SCREEN_WIDTH   ; 637   ; Signed Integer                        ;
-; SCREEN_HEIGHT  ; 477   ; Signed Integer                        ;
-; CELL_WIDTH     ; 79    ; Signed Integer                        ;
-; CELL_HEIGHT    ; 59    ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: videoGen:videogen|lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------------------------+
-; Parameter Name         ; Value          ; Type                                     ;
-+------------------------+----------------+------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                  ;
-; LPM_WIDTHD             ; 8              ; Untyped                                  ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                  ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
-; CBXI_PARAMETER         ; lpm_divide_hho ; Untyped                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
-+------------------------+----------------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: videoGen:videogen|lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------------------------+
-; Parameter Name         ; Value          ; Type                                     ;
-+------------------------+----------------+------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                  ;
-; LPM_WIDTHD             ; 7              ; Untyped                                  ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
-; LPM_PIPELINE           ; 0              ; Untyped                                  ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
-; CBXI_PARAMETER         ; lpm_divide_gho ; Untyped                                  ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
-+------------------------+----------------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 150                         ;
-;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 74                          ;
-;     plain             ; 66                          ;
-; arriav_lcell_comb     ; 752                         ;
-;     arith             ; 391                         ;
-;         0 data inputs ; 35                          ;
-;         1 data inputs ; 231                         ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 28                          ;
-;         4 data inputs ; 64                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 360                         ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 83                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 75                          ;
-;         5 data inputs ; 163                         ;
-;         6 data inputs ; 31                          ;
-; arriav_mac            ; 16                          ;
-; boundary_port         ; 33                          ;
-;                       ;                             ;
-; Max LUT depth         ; 34.20                       ;
-; Average LUT depth     ; 16.65                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Oct 16 20:09:10 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
+    Info: Processing started: Tue Oct 17 01:08:21 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tablero.sv
+    Info (12023): Found entity 1: tablero File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/tablero.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file randomgenerator.sv
+    Info (12023): Found entity 1: RandomGenerator File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/RandomGenerator.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file minesweeper.sv
+    Info (12023): Found entity 1: minesweeper File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/minesweeper.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file busca_minas_tb.sv
+    Info (12023): Found entity 1: busca_minas_tb File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file busca_minas.sv
+    Info (12023): Found entity 1: busca_minas File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.sv
     Info (12023): Found entity 1: ClockDivider File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/ClockDivider.sv Line: 1
-Info (12021): Found 3 design units, including 3 entities, in source file vga.sv
-    Info (12023): Found entity 1: vgaController File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 1
-    Info (12023): Found entity 2: videoGen File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 48
-    Info (12023): Found entity 3: vga File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 153
-Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
-    Info (12023): Found entity 1: FSM File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/FSM.sv Line: 1
-Info (12127): Elaborating entity "vga" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at vga.sv(161): object "x1" assigned a value but never read File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 161
-Warning (10036): Verilog HDL or VHDL warning at vga.sv(161): object "y1" assigned a value but never read File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 161
-Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:divider" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 171
-Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 173
-Warning (10230): Verilog HDL assignment warning at vga.sv(27): truncated value with size 32 to match size of target (10) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 27
-Warning (10230): Verilog HDL assignment warning at vga.sv(30): truncated value with size 32 to match size of target (10) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 30
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videogen" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 174
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videogen|Mod0" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 119
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videogen|Mod1" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 119
-Info (12130): Elaborated megafunction instantiation "videoGen:videogen|lpm_divide:Mod0" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 119
-Info (12133): Instantiated megafunction "videoGen:videogen|lpm_divide:Mod0" with the following parameter: File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 119
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hho.tdf
-    Info (12023): Found entity 1: lpm_divide_hho File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_divide_hho.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_nbg.tdf
-    Info (12023): Found entity 1: abs_divider_nbg File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/abs_divider_nbg.tdf Line: 29
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uve.tdf
-    Info (12023): Found entity 1: alt_u_div_uve File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/alt_u_div_uve.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_nn9.tdf
-    Info (12023): Found entity 1: lpm_abs_nn9 File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_abs_nn9.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
-    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_abs_4p9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "videoGen:videogen|lpm_divide:Mod1" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 119
-Info (12133): Instantiated megafunction "videoGen:videogen|lpm_divide:Mod1" with the following parameter: File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vga.sv Line: 119
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_gho.tdf
-    Info (12023): Found entity 1: lpm_divide_gho File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_divide_gho.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_mbg.tdf
-    Info (12023): Found entity 1: abs_divider_mbg File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/abs_divider_mbg.tdf Line: 29
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
-    Info (12023): Found entity 1: alt_u_div_sve File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/alt_u_div_sve.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_mn9.tdf
-    Info (12023): Found entity 1: lpm_abs_mn9 File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/db/lpm_abs_mn9.tdf Line: 23
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 929 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 880 logic cells
-    Info (21062): Implemented 16 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Mon Oct 16 20:09:22 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:14
+Warning (12019): Can't analyze file -- file FSM.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
+    Info (12023): Found entity 1: vgaController File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vgaController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
+    Info (12023): Found entity 1: videoGen File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/videoGen.sv Line: 1
+Info (12127): Elaborating entity "minesweeper" for the top level hierarchy
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:divider" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/minesweeper.sv Line: 17
+Info (12128): Elaborating entity "busca_minas" for hierarchy "busca_minas:busca_minas_inst" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/minesweeper.sv Line: 28
+Warning (10036): Verilog HDL or VHDL warning at busca_minas.sv(24): object "game_board_revealed" assigned a value but never read File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 24
+Warning (10036): Verilog HDL or VHDL warning at busca_minas.sv(25): object "game_board_adjacent" assigned a value but never read File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 25
+Warning (10235): Verilog HDL Always Construct warning at busca_minas.sv(94): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 94
+Warning (10235): Verilog HDL Always Construct warning at busca_minas.sv(98): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 98
+Warning (10235): Verilog HDL Always Construct warning at busca_minas.sv(103): variable "y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 103
+Warning (10235): Verilog HDL Always Construct warning at busca_minas.sv(107): variable "y" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 107
+Warning (10240): Verilog HDL Always Construct warning at busca_minas.sv(91): inferring latch(es) for variable "x", which holds its previous value in one or more paths through the always construct File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 91
+Warning (10240): Verilog HDL Always Construct warning at busca_minas.sv(91): inferring latch(es) for variable "y", which holds its previous value in one or more paths through the always construct File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 91
+Info (10041): Inferred latch for "y[0]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[1]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[2]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[3]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[4]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[5]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[6]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[7]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[8]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[9]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[10]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[11]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[12]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[13]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[14]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[15]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[16]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[17]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[18]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[19]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[20]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[21]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[22]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[23]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[24]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[25]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[26]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[27]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[28]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[29]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[30]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "y[31]" at busca_minas.sv(102) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 102
+Info (10041): Inferred latch for "x[0]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[1]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[2]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[3]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[4]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[5]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[6]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[7]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[8]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[9]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[10]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[11]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[12]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[13]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[14]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[15]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[16]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[17]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[18]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[19]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[20]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[21]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[22]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[23]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[24]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[25]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[26]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[27]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[28]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[29]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[30]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10041): Inferred latch for "x[31]" at busca_minas.sv(93) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 93
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "game_board_adjacent" into its bus
+Info (12128): Elaborating entity "RandomGenerator" for hierarchy "busca_minas:busca_minas_inst|RandomGenerator:r_inst" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 36
+Info (12128): Elaborating entity "tablero" for hierarchy "busca_minas:busca_minas_inst|tablero:tab_ins" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/busca_minas.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at tablero.sv(21): truncated value with size 6 to match size of target (1) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/tablero.sv Line: 21
+Info (10648): Verilog HDL Display System Task info at tablero.sv(22): AAAAAAAAAAA: File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/tablero.sv Line: 22
+Info (10648): Verilog HDL Display System Task info at tablero.sv(23): 1'b. File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/tablero.sv Line: 23
+Info (10648): Verilog HDL Display System Task info at tablero.sv(31): tablero en blanco!!!!!!!!!!!!!!!!! File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/tablero.sv Line: 31
+Warning (10855): Verilog HDL warning at tablero.sv(20): initial value for variable prev_total_mines should be constant File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/tablero.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at tablero.sv(42): truncated value with size 6 to match size of target (1) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/tablero.sv Line: 42
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "game_board_adjacent" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "game_board_adjacent" into its bus
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/minesweeper.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at vgaController.sv(27): truncated value with size 32 to match size of target (10) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vgaController.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at vgaController.sv(30): truncated value with size 32 to match size of target (10) File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/vgaController.sv Line: 30
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videogen" File: C:/Users/ASUS/OneDrive - Estudiantes ITCR/Documentos/GitHub/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Laboratorio 4/minesweeper.sv Line: 30
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Tue Oct 17 01:08:41 2023
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:24
 
 

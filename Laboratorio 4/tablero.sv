@@ -1,7 +1,7 @@
 module tablero(
 	input wire clk,       
    input wire rst,      
-	input logic [3:0] total_mines,
+	input logic [5:0] total_mines,
 	input reg [2:0] random_row, 
 	input reg [2:0] random_col,
 	output logic game_board_mine[8][8],
@@ -28,7 +28,7 @@ module tablero(
 				game_board_adjacent[i][j] = 0;
 			end
 		end
-		$display("tablero en blanco!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		$display("tablero en blanco!!!!!!!!!!!!!!!!!");
 		//$display(total_mines); 
 	end
 	
