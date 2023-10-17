@@ -10,12 +10,12 @@ module busca_minas (
 );
 
 
-int x = 0;
-int y = 0;
+int columna = 0;
+int fila = 0;
 
 logic [2:0] state, next_state;
 int cont = 0;
-int toWin = 58;
+int toWin = 0;
 
 reg [2:0] random_row;
 reg [2:0] random_col;
@@ -23,7 +23,6 @@ reg [2:0] random_col;
 logic game_board_mine[8][8];
 logic game_board_revealed[8][8];
 int game_board_adjacent[8][8];
-
 
 
 // Instanciar el random
@@ -34,6 +33,11 @@ RandomGenerator r_inst (
     .random_row(random_row),
     .random_column(random_col)
 );
+
+
+calcWin calcwin_inst (
+	.toWin(toWin),
+	.total_mines(total_mines));
 
 // Instanciar el módulo tablero
 
@@ -56,14 +60,14 @@ tablero tab_ins (
 
   // Next state logic
   always_comb
-  begin
+  begin 
     case(state)
 			// Estado 0
         3'b000:	if (sel) next_state = 3'b001;
 						else next_state = 3'b000;
 
         // Estado 1
-        3'b001: if (game_board_mine[y][x]) next_state = 3'b011;  //Revisa bomba y pierde
+        3'b001: if (game_board_mine[fila][columna]) next_state = 3'b011;  //Revisa bomba y pierde
 					else next_state = 3'b010; //Revisa bomba y sigue
 					
         // Estado 2
@@ -79,7 +83,7 @@ tablero tab_ins (
         // Estado 5
         3'b101: next_state = 3'b101; //Ganó, solo se sale con rst
 		  
-		  
+
         default: next_state = 3'b000;
 		  
     endcase
@@ -89,42 +93,62 @@ tablero tab_ins (
   //Output Logic (To be able to use if and else)
    
   always @(mov_right or mov_down)begin
-  $display("HAY MOVIMIENTO"); 
 	if(~mov_right)begin
-		if(x == 7)begin
-			x = 0;
-			$display("posicion en x es: %0d", x);
+		if(columna == 7)begin
+			columna = 0;
 		end else begin
-			x = x + 1;
-			$display("posicion en x es: %0d", x);
+			columna = columna + 1;
 		end
 	end
 	if(~mov_down)begin
-		if(y == 7)begin
-			y = 0;
-			$display("posicion en y es: %0d", y);
+		if(fila == 7)begin
+			fila = 0;
 		end else begin
-			y = y + 1;
-			$display("posicion en y es: %0d", y);
+			fila = fila + 1;
 		end
-	
+	 
 	end
+	$display("HAY MOVIMIENTO pos fila: %0d, columna: %0d",fila, columna);  
   end
  
 
   always @(next_state) begin
 	$display("El estado es: %0d", next_state);
-	if (next_state == 3'b011) begin
-	 gameover = 1;
-	end else begin
-	gameover = 0;
+	//$display(sel);
 	
+	//---------------------------------
+	/*
+	$display("Game Board Mines:");
+    for (int i = 0; i < 8; i = i + 1) begin
+      for (int j = 0; j < 8; j = j + 1) begin
+        $display("%0d ", game_board_mine[i][j]);
+      end
+      $display(""); // Nueva línea después de cada fila
+    end
+	*/
+	//---------------------------------
+	
+	
+	if (next_state == 1) begin
+		cont = cont +1;
+		//$display(toWin);
+		$display("hubo seleccion en la pos fila: %0d, columna: %0d", fila,columna); 
 	end
-			
+	
+	if (next_state == 3) begin
+		gameover = 1;
+		$display("Perdiste");
+	end else begin
+		gameover=0;
+	end
+		
+	
+	if(next_state == 2)begin
+		$display("estado 2");
+	end
+		
+	
   end
   
   
   endmodule
-  // Output logic just assigns 
-
-//assign msj_f = msj;

@@ -19,8 +19,6 @@ module tablero(
 	
 	initial begin
 		prev_total_mines = total_mines;
-		$display("AAAAAAAAAAA:");
-		$display(prev_total_mines);
 		for (int i = 0; i < 8; i++) begin
 			for (int j = 0; j < 8; j++) begin
 				game_board_mine[i][j] = 0; 
@@ -37,7 +35,6 @@ module tablero(
 		//verficar si totalmines ha cambiado
 		
 		if (total_mines != prev_total_mines && prev_total_mines >= 0 && total_mines >= 0) begin
-			$display("las minas cambiaroooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooon");
 			total_mine_changed = 1;
 			prev_total_mines = total_mines;
 		end

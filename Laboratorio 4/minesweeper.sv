@@ -1,6 +1,6 @@
 module minesweeper(
   input logic clk, btn0, btn1,btn2, sel_flag,
-  input wire rst,
+  input logic rst,
   input logic [5:0] total_mines,
   output logic vgaclk, gameoverdisp, // 25.175 MHz VGA clock
   output logic hsync, vsync,
@@ -9,7 +9,7 @@ module minesweeper(
     
 );
 
-  logic [9:0] x, y, posx, posy, x1, y1;
+  logic [9:0] x, y;
   // Use a PLL to create the 25.175 MHz VGA pixel clock (Insert the code for PLL instantiation here)
   ClockDivider divider (
     .clk(clk),
@@ -26,10 +26,8 @@ module minesweeper(
     .total_mines(total_mines),
 	 .gameover(gameoverdisp)
 );
+
   vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
   videoGen videogen(x, y, btn0,btn1,btn2, red, green, blue);
 
 endmodule
-
-
-
