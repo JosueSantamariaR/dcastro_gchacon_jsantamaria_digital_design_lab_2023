@@ -45,48 +45,12 @@ module vgaController #(
 
 endmodule
 
-module CirculoNegro(
-  input logic [9:0] x,
-  input logic [9:0] y,
-  output logic [7:0] red,
-  output logic [7:0] green,
-  output logic [7:0] blue
-);
-
-  // Parámetros para el círculo negro
-  parameter CIRCULO_SIZE = 50; // Tamaño del círculo (ancho y alto) en píxeles
-  logic [7:0] circle_color = 8'b00000000; // Color del círculo (negro)
-
-  logic [9:0] distance_x;
-  logic [9:0] distance_y;
-  logic [9:0] distance_squared;
-
-  always_comb begin
-    // Calcula la distancia desde el centro del círculo hasta el punto (x, y)
-    distance_x = x - 300; // Puedes establecer el valor del centro aquí
-    distance_y = y - 200; // Puedes establecer el valor del centro aquí
-    distance_squared = distance_x * distance_x + distance_y * distance_y;
-
-    // Si la distancia al cuadrado es menor o igual al radio del círculo al cuadrado,
-    // entonces estamos dentro del círculo y lo coloreamos de negro
-    if (distance_squared <= CIRCULO_SIZE * CIRCULO_SIZE) begin
-      red = circle_color;
-      green = circle_color;
-      blue = circle_color;
-    end else begin
-      // Si no estamos dentro del círculo, usa los colores de videoGen
-      red = red;
-      green = green;
-      blue = blue;
-    end
-  end
-endmodule
-
 module videoGen(
   input logic [9:0] x,
   input logic [9:0] y,
-  input logic btn_reset_right, // Botón para restablecer a la derecha
-  input logic btn_reset_down,  // Botón para restablecer hacia abajo
+  input logic btn_down, // Botón para mover hacia abajo
+  input logic btn_right, // Botón para cambiar de columna hacia la derecha
+  input logic btn_select, // Botón para cambiar de columna hacia la derecha
   output logic [7:0] red,
   output logic [7:0] green,
   output logic [7:0] blue
@@ -111,24 +75,38 @@ module videoGen(
   int rel_x;
   int rel_y;
 
-  // Variables para controlar la visibilidad del cuadro negro
-  logic show_black_box_right;
-  logic show_black_box_down;
-  
-  // Variables para controlar la posición de la casilla actual en los ejes X e Y
-  int current_x_position = 0;
-  int current_y_position = 0;
+  // Variables para controlar la posición vertical y horizontal del cuadro negro
+  int black_box_position = 0;
+  int black_box_row = 0;
 
-  always_ff @(posedge btn_reset_right) begin
-    // Al presionar el botón para la derecha, restablece la visibilidad del cuadro negro y aumenta la posición de la casilla en X
-    show_black_box_right <= !show_black_box_right;
-    current_x_position <= current_x_position + 1;
+  // Variables para controlar la casilla seleccionada
+  int selected_row = 0;
+  int selected_column = 0;
+
+  always_ff @(posedge btn_down) begin
+    // Al presionar el botón de mover hacia abajo, aumenta la posición vertical del cuadro negro
+    black_box_position <= black_box_position + 1;
+    // Verifica si el cuadro negro ha llegado al final de la fila
+    if (black_box_position >= NUM_ROWS - 1 ) begin
+      // Reinicia la posición vertical a 0
+      black_box_position <= 0;
+    end
   end
 
-  always_ff @(posedge btn_reset_down) begin
-    // Al presionar el botón hacia abajo, restablece la visibilidad del cuadro negro y aumenta la posición de la casilla en Y
-    show_black_box_down <= !show_black_box_down;
-    current_y_position <= current_y_position + 1;
+  always_ff @(posedge btn_right) begin
+    // Al presionar el botón de mover hacia la derecha, aumenta la posición horizontal del cuadro negro
+    black_box_row <= black_box_row + 1;
+    // Verifica si el cuadro negro ha llegado al final de la columna
+    if (black_box_row >= NUM_COLUMNS - 1 ) begin
+      // Reinicia la posición horizontal a 0
+      black_box_row <= 0;
+    end
+  end
+
+  always_ff @(posedge btn_select) begin
+    // Al presionar el botón de seleccionar, actualiza la casilla seleccionada
+    selected_row <= black_box_position;
+    selected_column <= black_box_row;
   end
 
   always_comb begin
@@ -156,26 +134,24 @@ module videoGen(
       blue = background_color;
     end
 
-    // Agrega un cuadro negro sobre la casilla actual si show_black_box_right es 1
-    if (show_black_box_right && rel_y >= 0 && rel_y < CELL_HEIGHT && rel_x >= current_x_position * CELL_WIDTH && rel_x < (current_x_position + 1) * CELL_WIDTH) begin
+    // Agrega un cuadro negro que se mueve hacia abajo en la fila deseada
+    if (rel_x >= black_box_row * CELL_WIDTH && rel_x < (black_box_row + 1) * CELL_WIDTH &&
+        rel_y >= black_box_position * CELL_HEIGHT && rel_y < (black_box_position + 1) * CELL_HEIGHT) begin
       red = 8'b00000000; // Negro
       green = 8'b00000000; // Negro
       blue = 8'b00000000; // Negro
     end
 
-    // Agrega un cuadro negro sobre la casilla actual si show_black_box_down es 1
-    if (show_black_box_down && rel_x >= 0 && rel_x < CELL_WIDTH && rel_y >= current_y_position * CELL_HEIGHT && rel_y < (current_y_position + 1) * CELL_HEIGHT) begin
-      red = 8'b00000000; // Negro
-      green = 8'b00000000; // Negro
-      blue = 8'b00000000; // Negro
-    end
+     // Pinta la casilla seleccionada de verde
+  if (rel_x >= selected_column * CELL_WIDTH && rel_x < (selected_column + 1) * CELL_WIDTH &&
+      rel_y >= selected_row * CELL_HEIGHT && rel_y < (selected_row + 1) * CELL_HEIGHT) begin
+    green = 8'b00100000; // Verde en formato binario
+  end
   end
 endmodule
 
-
-
 module vga(
-  input logic clk, btn_reset_down, btn_reset_right, 
+  input logic clk, btn_down, btn_right,btn_select,
   output logic vgaclk, // 25.175 MHz VGA clock
   output logic hsync, vsync,
   output logic sync_b, blank_b,
@@ -195,7 +171,7 @@ module vga(
   );
 
   vgaController vgaCont(vgaclk, hsync, vsync, sync_b, blank_b, x, y);
-  videoGen videogen(x, y, btn_reset_right,btn_reset_down, red, green, blue);
+  videoGen videogen(x, y, btn_down,btn_right,btn_select, red, green, blue);
 
 endmodule
 

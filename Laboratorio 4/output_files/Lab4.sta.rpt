@@ -1,5 +1,5 @@
 Timing Analyzer report for Lab4
-Tue Oct 10 01:54:37 2023
+Mon Oct 16 20:10:53 2023
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -98,12 +98,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.17        ;
+; Average used               ; 1.24        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  16.8%      ;
+;     Processor 2            ;  24.1%      ;
 +----------------------------+-------------+
 
 
@@ -112,8 +112,9 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------+
 ; Clock Name                  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                         ;
 +-----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------+
-; btn_reset_down              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { btn_reset_down }              ;
-; btn_reset_right             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { btn_reset_right }             ;
+; btn_down                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { btn_down }                    ;
+; btn_right                   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { btn_right }                   ;
+; btn_select                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { btn_select }                  ;
 ; clk                         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                         ;
 ; ClockDivider:divider|vgaclk ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ClockDivider:divider|vgaclk } ;
 +-----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------+
@@ -124,10 +125,10 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-----------------------------+------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note                                                 ;
 +------------+-----------------+-----------------------------+------------------------------------------------------+
-; 325.73 MHz ; 325.73 MHz      ; ClockDivider:divider|vgaclk ;                                                      ;
-; 376.79 MHz ; 376.79 MHz      ; btn_reset_right             ;                                                      ;
-; 376.93 MHz ; 376.93 MHz      ; btn_reset_down              ;                                                      ;
-; 492.37 MHz ; 357.14 MHz      ; clk                         ; limit due to low minimum pulse width violation (tcl) ;
+; 245.76 MHz ; 245.76 MHz      ; btn_right                   ;                                                      ;
+; 262.19 MHz ; 262.19 MHz      ; btn_down                    ;                                                      ;
+; 331.56 MHz ; 331.56 MHz      ; ClockDivider:divider|vgaclk ;                                                      ;
+; 490.68 MHz ; 397.77 MHz      ; clk                         ; limit due to low minimum pulse width violation (tcl) ;
 +------------+-----------------+-----------------------------+------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -143,10 +144,11 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; ClockDivider:divider|vgaclk ; -2.070 ; -41.372       ;
-; btn_reset_right             ; -1.654 ; -36.030       ;
-; btn_reset_down              ; -1.653 ; -36.077       ;
-; clk                         ; -1.031 ; -1.448        ;
+; btn_select                  ; -4.766 ; -286.772      ;
+; btn_right                   ; -3.069 ; -95.240       ;
+; btn_down                    ; -2.814 ; -86.434       ;
+; ClockDivider:divider|vgaclk ; -2.016 ; -44.475       ;
+; clk                         ; -1.038 ; -1.307        ;
 +-----------------------------+--------+---------------+
 
 
@@ -155,10 +157,11 @@ HTML report is unavailable in plain text report export.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; btn_reset_down              ; 0.381 ; 0.000         ;
-; btn_reset_right             ; 0.381 ; 0.000         ;
-; clk                         ; 0.439 ; 0.000         ;
-; ClockDivider:divider|vgaclk ; 0.662 ; 0.000         ;
+; clk                         ; 0.357 ; 0.000         ;
+; btn_down                    ; 0.382 ; 0.000         ;
+; btn_right                   ; 0.382 ; 0.000         ;
+; ClockDivider:divider|vgaclk ; 0.557 ; 0.000         ;
+; btn_select                  ; 1.434 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -179,10 +182,11 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -0.900 ; -3.109        ;
-; btn_reset_right             ; -0.394 ; -22.770       ;
-; btn_reset_down              ; -0.394 ; -22.740       ;
-; ClockDivider:divider|vgaclk ; -0.394 ; -11.538       ;
+; clk                         ; -0.757 ; -2.533        ;
+; btn_select                  ; -0.394 ; -33.266       ;
+; btn_right                   ; -0.394 ; -23.025       ;
+; btn_down                    ; -0.394 ; -21.992       ;
+; ClockDivider:divider|vgaclk ; -0.394 ; -12.151       ;
 +-----------------------------+--------+---------------+
 
 
@@ -197,10 +201,10 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------------+------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                  ; Note                                                 ;
 +------------+-----------------+-----------------------------+------------------------------------------------------+
-; 317.97 MHz ; 317.97 MHz      ; ClockDivider:divider|vgaclk ;                                                      ;
-; 359.32 MHz ; 359.32 MHz      ; btn_reset_down              ;                                                      ;
-; 359.97 MHz ; 359.97 MHz      ; btn_reset_right             ;                                                      ;
-; 502.77 MHz ; 357.91 MHz      ; clk                         ; limit due to low minimum pulse width violation (tcl) ;
+; 249.13 MHz ; 249.13 MHz      ; btn_right                   ;                                                      ;
+; 265.6 MHz  ; 265.6 MHz       ; btn_down                    ;                                                      ;
+; 332.56 MHz ; 332.56 MHz      ; ClockDivider:divider|vgaclk ;                                                      ;
+; 499.0 MHz  ; 395.26 MHz      ; clk                         ; limit due to low minimum pulse width violation (tcl) ;
 +------------+-----------------+-----------------------------+------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -210,10 +214,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; ClockDivider:divider|vgaclk ; -2.145 ; -41.428       ;
-; btn_reset_down              ; -1.783 ; -39.118       ;
-; btn_reset_right             ; -1.778 ; -38.978       ;
-; clk                         ; -0.989 ; -1.437        ;
+; btn_select                  ; -4.567 ; -273.991      ;
+; btn_right                   ; -3.014 ; -93.515       ;
+; btn_down                    ; -2.765 ; -85.208       ;
+; ClockDivider:divider|vgaclk ; -2.007 ; -43.967       ;
+; clk                         ; -1.004 ; -1.241        ;
 +-----------------------------+--------+---------------+
 
 
@@ -222,10 +227,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; btn_reset_right             ; 0.380 ; 0.000         ;
-; btn_reset_down              ; 0.381 ; 0.000         ;
-; clk                         ; 0.454 ; 0.000         ;
-; ClockDivider:divider|vgaclk ; 0.650 ; 0.000         ;
+; clk                         ; 0.331 ; 0.000         ;
+; btn_right                   ; 0.381 ; 0.000         ;
+; btn_down                    ; 0.382 ; 0.000         ;
+; ClockDivider:divider|vgaclk ; 0.517 ; 0.000         ;
+; btn_select                  ; 1.288 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -246,10 +252,11 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -0.897 ; -3.154        ;
-; btn_reset_right             ; -0.394 ; -21.290       ;
-; btn_reset_down              ; -0.394 ; -20.948       ;
-; ClockDivider:divider|vgaclk ; -0.394 ; -11.510       ;
+; clk                         ; -0.765 ; -2.631        ;
+; btn_select                  ; -0.394 ; -36.627       ;
+; btn_right                   ; -0.394 ; -21.401       ;
+; btn_down                    ; -0.394 ; -20.110       ;
+; ClockDivider:divider|vgaclk ; -0.394 ; -12.190       ;
 +-----------------------------+--------+---------------+
 
 
@@ -264,10 +271,11 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; ClockDivider:divider|vgaclk ; -0.818 ; -16.380       ;
-; btn_reset_down              ; -0.448 ; -5.758        ;
-; btn_reset_right             ; -0.448 ; -5.730        ;
-; clk                         ; -0.400 ; -0.400        ;
+; btn_select                  ; -2.292 ; -133.809      ;
+; btn_right                   ; -1.387 ; -41.121       ;
+; btn_down                    ; -1.169 ; -34.968       ;
+; ClockDivider:divider|vgaclk ; -0.833 ; -18.181       ;
+; clk                         ; -0.399 ; -0.399        ;
 +-----------------------------+--------+---------------+
 
 
@@ -276,10 +284,11 @@ No synchronizer chains to report.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clk                         ; 0.158 ; 0.000         ;
-; btn_reset_down              ; 0.202 ; 0.000         ;
-; btn_reset_right             ; 0.203 ; 0.000         ;
-; ClockDivider:divider|vgaclk ; 0.343 ; 0.000         ;
+; clk                         ; 0.141 ; 0.000         ;
+; btn_down                    ; 0.204 ; 0.000         ;
+; btn_right                   ; 0.204 ; 0.000         ;
+; ClockDivider:divider|vgaclk ; 0.251 ; 0.000         ;
+; btn_select                  ; 0.755 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -300,10 +309,11 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -0.801 ; -2.500        ;
-; btn_reset_down              ; -0.336 ; -11.237       ;
-; btn_reset_right             ; -0.336 ; -11.237       ;
-; ClockDivider:divider|vgaclk ; 0.077  ; 0.000         ;
+; clk                         ; -0.669 ; -1.968        ;
+; btn_down                    ; -0.336 ; -10.805       ;
+; btn_right                   ; -0.323 ; -11.100       ;
+; btn_select                  ; -0.084 ; -5.092        ;
+; ClockDivider:divider|vgaclk ; 0.067  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -318,10 +328,11 @@ No synchronizer chains to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; ClockDivider:divider|vgaclk ; -0.751 ; -14.362       ;
-; btn_reset_right             ; -0.434 ; -5.359        ;
-; btn_reset_down              ; -0.434 ; -5.346        ;
-; clk                         ; -0.309 ; -0.309        ;
+; btn_select                  ; -2.154 ; -126.306      ;
+; btn_right                   ; -1.172 ; -34.519       ;
+; btn_down                    ; -0.999 ; -29.876       ;
+; ClockDivider:divider|vgaclk ; -0.748 ; -16.019       ;
+; clk                         ; -0.302 ; -0.302        ;
 +-----------------------------+--------+---------------+
 
 
@@ -330,10 +341,11 @@ No synchronizer chains to report.
 +-----------------------------+-------+---------------+
 ; Clock                       ; Slack ; End Point TNS ;
 +-----------------------------+-------+---------------+
-; clk                         ; 0.146 ; 0.000         ;
-; btn_reset_right             ; 0.189 ; 0.000         ;
-; btn_reset_down              ; 0.190 ; 0.000         ;
-; ClockDivider:divider|vgaclk ; 0.308 ; 0.000         ;
+; clk                         ; 0.113 ; 0.000         ;
+; btn_right                   ; 0.189 ; 0.000         ;
+; btn_down                    ; 0.190 ; 0.000         ;
+; ClockDivider:divider|vgaclk ; 0.221 ; 0.000         ;
+; btn_select                  ; 0.665 ; 0.000         ;
 +-----------------------------+-------+---------------+
 
 
@@ -354,10 +366,11 @@ No paths to report.
 +-----------------------------+--------+---------------+
 ; Clock                       ; Slack  ; End Point TNS ;
 +-----------------------------+--------+---------------+
-; clk                         ; -0.753 ; -2.324        ;
-; btn_reset_right             ; -0.321 ; -10.695       ;
-; btn_reset_down              ; -0.318 ; -10.610       ;
-; ClockDivider:divider|vgaclk ; 0.092  ; 0.000         ;
+; clk                         ; -0.656 ; -1.939        ;
+; btn_down                    ; -0.318 ; -10.228       ;
+; btn_right                   ; -0.310 ; -10.651       ;
+; btn_select                  ; -0.084 ; -5.202        ;
+; ClockDivider:divider|vgaclk ; 0.083  ; 0.000         ;
 +-----------------------------+--------+---------------+
 
 
@@ -372,16 +385,18 @@ No synchronizer chains to report.
 +------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                        ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack             ; -2.145   ; 0.146 ; N/A      ; N/A     ; -0.900              ;
-;  ClockDivider:divider|vgaclk ; -2.145   ; 0.308 ; N/A      ; N/A     ; -0.394              ;
-;  btn_reset_down              ; -1.783   ; 0.190 ; N/A      ; N/A     ; -0.394              ;
-;  btn_reset_right             ; -1.778   ; 0.189 ; N/A      ; N/A     ; -0.394              ;
-;  clk                         ; -1.031   ; 0.146 ; N/A      ; N/A     ; -0.900              ;
-; Design-wide TNS              ; -120.961 ; 0.0   ; 0.0      ; 0.0     ; -60.157             ;
-;  ClockDivider:divider|vgaclk ; -41.428  ; 0.000 ; N/A      ; N/A     ; -11.538             ;
-;  btn_reset_down              ; -39.118  ; 0.000 ; N/A      ; N/A     ; -22.740             ;
-;  btn_reset_right             ; -38.978  ; 0.000 ; N/A      ; N/A     ; -22.770             ;
-;  clk                         ; -1.448   ; 0.000 ; N/A      ; N/A     ; -3.154              ;
+; Worst-case Slack             ; -4.766   ; 0.113 ; N/A      ; N/A     ; -0.765              ;
+;  ClockDivider:divider|vgaclk ; -2.016   ; 0.221 ; N/A      ; N/A     ; -0.394              ;
+;  btn_down                    ; -2.814   ; 0.190 ; N/A      ; N/A     ; -0.394              ;
+;  btn_right                   ; -3.069   ; 0.189 ; N/A      ; N/A     ; -0.394              ;
+;  btn_select                  ; -4.766   ; 0.665 ; N/A      ; N/A     ; -0.394              ;
+;  clk                         ; -1.038   ; 0.113 ; N/A      ; N/A     ; -0.765              ;
+; Design-wide TNS              ; -514.228 ; 0.0   ; 0.0      ; 0.0     ; -92.967             ;
+;  ClockDivider:divider|vgaclk ; -44.475  ; 0.000 ; N/A      ; N/A     ; -12.190             ;
+;  btn_down                    ; -86.434  ; 0.000 ; N/A      ; N/A     ; -21.992             ;
+;  btn_right                   ; -95.240  ; 0.000 ; N/A      ; N/A     ; -23.025             ;
+;  btn_select                  ; -286.772 ; 0.000 ; N/A      ; N/A     ; -36.627             ;
+;  clk                         ; -1.307   ; 0.000 ; N/A      ; N/A     ; -2.631              ;
 +------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -422,15 +437,16 @@ No synchronizer chains to report.
 +----------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+--------------------------------------------------------------------+
-; Input Transition Times                                             ;
-+-----------------+--------------+-----------------+-----------------+
-; Pin             ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+-----------------+--------------+-----------------+-----------------+
-; clk             ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; btn_reset_right ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; btn_reset_down  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+-----------------+--------------+-----------------+-----------------+
++---------------------------------------------------------------+
+; Input Transition Times                                        ;
++------------+--------------+-----------------+-----------------+
+; Pin        ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++------------+--------------+-----------------+-----------------+
+; clk        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; btn_right  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; btn_down   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; btn_select ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++------------+--------------+-----------------+-----------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -586,10 +602,12 @@ No synchronizer chains to report.
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
-; btn_reset_down              ; btn_reset_down              ; 529      ; 0        ; 0        ; 0        ;
-; btn_reset_right             ; btn_reset_right             ; 529      ; 0        ; 0        ; 0        ;
+; btn_down                    ; btn_down                    ; 1552     ; 0        ; 0        ; 0        ;
+; btn_right                   ; btn_right                   ; 1643     ; 0        ; 0        ; 0        ;
+; btn_down                    ; btn_select                  ; 32       ; 0        ; 0        ; 0        ;
+; btn_right                   ; btn_select                  ; 32       ; 0        ; 0        ; 0        ;
 ; clk                         ; clk                         ; 2        ; 0        ; 0        ; 0        ;
-; ClockDivider:divider|vgaclk ; ClockDivider:divider|vgaclk ; 440      ; 0        ; 0        ; 0        ;
+; ClockDivider:divider|vgaclk ; ClockDivider:divider|vgaclk ; 467      ; 0        ; 0        ; 0        ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -599,10 +617,12 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 ; From Clock                  ; To Clock                    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
-; btn_reset_down              ; btn_reset_down              ; 529      ; 0        ; 0        ; 0        ;
-; btn_reset_right             ; btn_reset_right             ; 529      ; 0        ; 0        ; 0        ;
+; btn_down                    ; btn_down                    ; 1552     ; 0        ; 0        ; 0        ;
+; btn_right                   ; btn_right                   ; 1643     ; 0        ; 0        ; 0        ;
+; btn_down                    ; btn_select                  ; 32       ; 0        ; 0        ; 0        ;
+; btn_right                   ; btn_select                  ; 32       ; 0        ; 0        ; 0        ;
 ; clk                         ; clk                         ; 2        ; 0        ; 0        ; 0        ;
-; ClockDivider:divider|vgaclk ; ClockDivider:divider|vgaclk ; 440      ; 0        ; 0        ; 0        ;
+; ClockDivider:divider|vgaclk ; ClockDivider:divider|vgaclk ; 467      ; 0        ; 0        ; 0        ;
 +-----------------------------+-----------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -629,7 +649,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
 ; Unconstrained Output Ports      ; 29    ; 29   ;
-; Unconstrained Output Port Paths ; 2105  ; 2105 ;
+; Unconstrained Output Port Paths ; 2641  ; 2641 ;
 +---------------------------------+-------+------+
 
 
@@ -639,8 +659,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Target                      ; Clock                       ; Type ; Status      ;
 +-----------------------------+-----------------------------+------+-------------+
 ; ClockDivider:divider|vgaclk ; ClockDivider:divider|vgaclk ; Base ; Constrained ;
-; btn_reset_down              ; btn_reset_down              ; Base ; Constrained ;
-; btn_reset_right             ; btn_reset_right             ; Base ; Constrained ;
+; btn_down                    ; btn_down                    ; Base ; Constrained ;
+; btn_right                   ; btn_right                   ; Base ; Constrained ;
+; btn_select                  ; btn_select                  ; Base ; Constrained ;
 ; clk                         ; clk                         ; Base ; Constrained ;
 +-----------------------------+-----------------------------+------+-------------+
 
@@ -725,7 +746,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Tue Oct 10 01:54:30 2023
+    Info: Processing started: Mon Oct 16 20:10:45 2023
 Info: Command: quartus_sta Lab4 -c Lab4
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -737,128 +758,141 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name ClockDivider:divider|vgaclk ClockDivider:divider|vgaclk
     Info (332105): create_clock -period 1.000 -name clk clk
-    Info (332105): create_clock -period 1.000 -name btn_reset_right btn_reset_right
-    Info (332105): create_clock -period 1.000 -name btn_reset_down btn_reset_down
+    Info (332105): create_clock -period 1.000 -name btn_right btn_right
+    Info (332105): create_clock -period 1.000 -name btn_down btn_down
+    Info (332105): create_clock -period 1.000 -name btn_select btn_select
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.070
+Info (332146): Worst-case setup slack is -4.766
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.070             -41.372 ClockDivider:divider|vgaclk 
-    Info (332119):    -1.654             -36.030 btn_reset_right 
-    Info (332119):    -1.653             -36.077 btn_reset_down 
-    Info (332119):    -1.031              -1.448 clk 
-Info (332146): Worst-case hold slack is 0.381
+    Info (332119):    -4.766            -286.772 btn_select 
+    Info (332119):    -3.069             -95.240 btn_right 
+    Info (332119):    -2.814             -86.434 btn_down 
+    Info (332119):    -2.016             -44.475 ClockDivider:divider|vgaclk 
+    Info (332119):    -1.038              -1.307 clk 
+Info (332146): Worst-case hold slack is 0.357
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.381               0.000 btn_reset_down 
-    Info (332119):     0.381               0.000 btn_reset_right 
-    Info (332119):     0.439               0.000 clk 
-    Info (332119):     0.662               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):     0.357               0.000 clk 
+    Info (332119):     0.382               0.000 btn_down 
+    Info (332119):     0.382               0.000 btn_right 
+    Info (332119):     0.557               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):     1.434               0.000 btn_select 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.900
+Info (332146): Worst-case minimum pulse width slack is -0.757
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.900              -3.109 clk 
-    Info (332119):    -0.394             -22.770 btn_reset_right 
-    Info (332119):    -0.394             -22.740 btn_reset_down 
-    Info (332119):    -0.394             -11.538 ClockDivider:divider|vgaclk 
+    Info (332119):    -0.757              -2.533 clk 
+    Info (332119):    -0.394             -33.266 btn_select 
+    Info (332119):    -0.394             -23.025 btn_right 
+    Info (332119):    -0.394             -21.992 btn_down 
+    Info (332119):    -0.394             -12.151 ClockDivider:divider|vgaclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -2.145
+Info (332146): Worst-case setup slack is -4.567
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.145             -41.428 ClockDivider:divider|vgaclk 
-    Info (332119):    -1.783             -39.118 btn_reset_down 
-    Info (332119):    -1.778             -38.978 btn_reset_right 
-    Info (332119):    -0.989              -1.437 clk 
-Info (332146): Worst-case hold slack is 0.380
+    Info (332119):    -4.567            -273.991 btn_select 
+    Info (332119):    -3.014             -93.515 btn_right 
+    Info (332119):    -2.765             -85.208 btn_down 
+    Info (332119):    -2.007             -43.967 ClockDivider:divider|vgaclk 
+    Info (332119):    -1.004              -1.241 clk 
+Info (332146): Worst-case hold slack is 0.331
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.380               0.000 btn_reset_right 
-    Info (332119):     0.381               0.000 btn_reset_down 
-    Info (332119):     0.454               0.000 clk 
-    Info (332119):     0.650               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):     0.331               0.000 clk 
+    Info (332119):     0.381               0.000 btn_right 
+    Info (332119):     0.382               0.000 btn_down 
+    Info (332119):     0.517               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):     1.288               0.000 btn_select 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.897
+Info (332146): Worst-case minimum pulse width slack is -0.765
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.897              -3.154 clk 
-    Info (332119):    -0.394             -21.290 btn_reset_right 
-    Info (332119):    -0.394             -20.948 btn_reset_down 
-    Info (332119):    -0.394             -11.510 ClockDivider:divider|vgaclk 
+    Info (332119):    -0.765              -2.631 clk 
+    Info (332119):    -0.394             -36.627 btn_select 
+    Info (332119):    -0.394             -21.401 btn_right 
+    Info (332119):    -0.394             -20.110 btn_down 
+    Info (332119):    -0.394             -12.190 ClockDivider:divider|vgaclk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.818
+Info (332146): Worst-case setup slack is -2.292
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.818             -16.380 ClockDivider:divider|vgaclk 
-    Info (332119):    -0.448              -5.758 btn_reset_down 
-    Info (332119):    -0.448              -5.730 btn_reset_right 
-    Info (332119):    -0.400              -0.400 clk 
-Info (332146): Worst-case hold slack is 0.158
+    Info (332119):    -2.292            -133.809 btn_select 
+    Info (332119):    -1.387             -41.121 btn_right 
+    Info (332119):    -1.169             -34.968 btn_down 
+    Info (332119):    -0.833             -18.181 ClockDivider:divider|vgaclk 
+    Info (332119):    -0.399              -0.399 clk 
+Info (332146): Worst-case hold slack is 0.141
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.158               0.000 clk 
-    Info (332119):     0.202               0.000 btn_reset_down 
-    Info (332119):     0.203               0.000 btn_reset_right 
-    Info (332119):     0.343               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):     0.141               0.000 clk 
+    Info (332119):     0.204               0.000 btn_down 
+    Info (332119):     0.204               0.000 btn_right 
+    Info (332119):     0.251               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):     0.755               0.000 btn_select 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.801
+Info (332146): Worst-case minimum pulse width slack is -0.669
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.801              -2.500 clk 
-    Info (332119):    -0.336             -11.237 btn_reset_down 
-    Info (332119):    -0.336             -11.237 btn_reset_right 
-    Info (332119):     0.077               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):    -0.669              -1.968 clk 
+    Info (332119):    -0.336             -10.805 btn_down 
+    Info (332119):    -0.323             -11.100 btn_right 
+    Info (332119):    -0.084              -5.092 btn_select 
+    Info (332119):     0.067               0.000 ClockDivider:divider|vgaclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.751
+Info (332146): Worst-case setup slack is -2.154
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.751             -14.362 ClockDivider:divider|vgaclk 
-    Info (332119):    -0.434              -5.359 btn_reset_right 
-    Info (332119):    -0.434              -5.346 btn_reset_down 
-    Info (332119):    -0.309              -0.309 clk 
-Info (332146): Worst-case hold slack is 0.146
+    Info (332119):    -2.154            -126.306 btn_select 
+    Info (332119):    -1.172             -34.519 btn_right 
+    Info (332119):    -0.999             -29.876 btn_down 
+    Info (332119):    -0.748             -16.019 ClockDivider:divider|vgaclk 
+    Info (332119):    -0.302              -0.302 clk 
+Info (332146): Worst-case hold slack is 0.113
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.146               0.000 clk 
-    Info (332119):     0.189               0.000 btn_reset_right 
-    Info (332119):     0.190               0.000 btn_reset_down 
-    Info (332119):     0.308               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):     0.113               0.000 clk 
+    Info (332119):     0.189               0.000 btn_right 
+    Info (332119):     0.190               0.000 btn_down 
+    Info (332119):     0.221               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):     0.665               0.000 btn_select 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.753
+Info (332146): Worst-case minimum pulse width slack is -0.656
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.753              -2.324 clk 
-    Info (332119):    -0.321             -10.695 btn_reset_right 
-    Info (332119):    -0.318             -10.610 btn_reset_down 
-    Info (332119):     0.092               0.000 ClockDivider:divider|vgaclk 
+    Info (332119):    -0.656              -1.939 clk 
+    Info (332119):    -0.318             -10.228 btn_down 
+    Info (332119):    -0.310             -10.651 btn_right 
+    Info (332119):    -0.084              -5.202 btn_select 
+    Info (332119):     0.083               0.000 ClockDivider:divider|vgaclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5149 megabytes
-    Info: Processing ended: Tue Oct 10 01:54:37 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 5151 megabytes
+    Info: Processing ended: Mon Oct 16 20:10:53 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 
