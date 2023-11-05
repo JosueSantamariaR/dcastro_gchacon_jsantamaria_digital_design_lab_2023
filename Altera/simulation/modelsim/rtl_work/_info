@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera/simulation/modelsim
+vram1
+Z1 !s110 1699170370
+!i10b 1
+!s100 7@ML2QRnN?MhMGhQ4F`c;3
+I0]lMGWngmO[3QXm:iCG0K2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1699168211
+8D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera/ram1.v
+FD:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera/ram1.v
+L0 40
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1699170370.000000
+!s107 D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera/ram1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera|D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera/ram1.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work {+incdir+D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera}
+Z5 tCvgOpt 0
+vram_TB
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R1
+!i10b 1
+!s100 ^6c96NO[zUjY_;O?[TS6C2
+I641POm9DKMD>HI];7AC_d3
+R2
+!s105 ram_TB_sv_unit
+S1
+R0
+w1699170195
+8D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera/ram_TB.sv
+FD:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera/ram_TB.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera/ram_TB.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera|D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera/ram_TB.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work {+incdir+D:/.TEC/Taller De Diseno Digital/dcastro_gchacon_jsantamaria_digital_design_lab_2023/Altera}
+R5
+nram_@t@b
