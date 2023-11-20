@@ -27,28 +27,33 @@ module datapath(
   // Register file logic
   mux2 #(4) ra1mux(Instr[19:16], 4'b1111, RegSrc[0], RA1);
   mux2 #(4) ra2mux(Instr[3:0], Instr[15:12], RegSrc[1], RA2);
-  regfile rf(
-    .clk(clk),
-    .RegWrite(RegWrite),
-    .RA1(RA1),
-    .RA2(RA2),
-    .WriteData(WriteData),
-    .Instr(Instr[15:12]),
-    .Result(Result),
-    .PCPlus8(PCPlus8),
-    .SrcA(SrcA)
-  );
+ 
+ 
+ regfile rf (
+  .clk(clk),
+  .we3(RegWrite),
+  .ra1(RA1),
+  .ra2(RA2),
+  .wa3(Instr[15:12]),  // -----------------
+  .wd3(WriteData),
+  .r15(Result),
+  .rd1(PCPlus8),
+  .rd2(SrcA)
+);
+
+
 
   mux2 #(32) resmux(ALUResult, ReadData, MemtoReg, Result);
   extend ext(Instr[23:0], ImmSrc, ExtImm);
 
   // ALU logic
   mux2 #(32) srcbmux(WriteData, ExtImm, ALUSrc, SrcB);
+  
   alu alu(
-    .a(SrcA),
-    .b(SrcB),
-    .ALUControl(ALUControl),
-    .y(ALUResult),
+    .i_ALU_Src1(SrcA),
+    .i_ALU_Src2(SrcB),
+    .i_ALU_Control(ALUControl),
+    .o_ALU_Result(ALUResult),
     .o_ALU_Flags(ALUFlags)
   );
 

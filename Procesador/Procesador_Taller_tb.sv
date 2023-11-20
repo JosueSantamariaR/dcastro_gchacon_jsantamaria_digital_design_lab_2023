@@ -1,3 +1,4 @@
+//vsim -L altera_mf_ver -L lpm_ver rom_top_tb
 module Procesador_Taller_tb;
   logic clk;
   logic reset;
@@ -5,7 +6,7 @@ module Procesador_Taller_tb;
   logic MemWrite;
 
   // instantiate device to be tested
-  top dut(clk, reset, WriteData, DataAdr, MemWrite);
+  Procesador_Taller proc(clk, reset, WriteData, DataAdr, MemWrite);
 
   // initialize test
   initial
@@ -19,9 +20,9 @@ module Procesador_Taller_tb;
   always
   begin
     clk <= 1;
-    #5;
+    #50;
     clk <= 0;
-    #5;
+    #50;
   end
 
   // check that 7 gets written to address 0x64

@@ -13,7 +13,7 @@ module decoder(
 
   // Main Decoder
   always_comb begin
-    casex(Op)
+    case(Op)
       // Data-processing immediate
       2'b00: controls = Funct[5] ? 10'b0000101001 : 10'b0000001001;
       // LDR
@@ -23,8 +23,6 @@ module decoder(
       // Unimplemented
       default: controls = 10'bx;
     endcase
-
-    assign {RegSrc, ImmSrc, ALUSrc, MemtoReg, RegW, MemW, Branch, ALUOp} = controls;
   end
 
   // ALU Decoder
@@ -50,4 +48,8 @@ module decoder(
   // PC Logic
   assign PCS = ((Rd == 4'b1111) & RegW) | Branch;
 
+  // Assign decoded controls to outputs
+  assign {RegSrc, ImmSrc, ALUSrc, MemtoReg, RegW, MemW, Branch, ALUOp} = controls;
+
 endmodule
+

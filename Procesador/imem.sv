@@ -7,7 +7,7 @@ module imem(
 
   initial
     // CAMBIAR DIRECCION DEL ARCHIVO ========================
-    $readmemh("C:/Users/DELL/Desktop/Digitales/jgonzalez_digital_design_lab_2023/PROYECTO/memfile.dat", RAM);
+    $readmem("images.mif", RAM);
     // CAMBIAR DIRECCION DEL ARCHIVO ========================
 
   assign rd = RAM[a[31:2]]; // Word-aligned

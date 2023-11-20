@@ -11,7 +11,7 @@ module alu #(parameter BusWidth = 32)(
   typedef enum logic [1:0] {ADD, SUB, AND, ORR} ALU_Operation;
 
   // Result logic
-  always_comb
+  always_comb begin
     case (i_ALU_Control)
       ADD: s_ALU_Result = i_ALU_Src1 + i_ALU_Src2;
       SUB: s_ALU_Result = i_ALU_Src1 - i_ALU_Src2;
@@ -19,9 +19,10 @@ module alu #(parameter BusWidth = 32)(
       ORR: s_ALU_Result = i_ALU_Src1 | i_ALU_Src2;
       default: s_ALU_Result = '0;
     endcase
+  end
 
   // Flags logic
-  always_comb
+  always_comb begin
     s_Flag_Negative = (s_ALU_Result[BusWidth - 1] == 1) ? 1 : 0;
     s_Flag_Zero = (s_ALU_Result == 0) ? 1 : 0;
 
@@ -41,6 +42,7 @@ module alu #(parameter BusWidth = 32)(
         s_Flag_Overflow = 1'bx;
       end
     endcase
+  end
 
   assign o_ALU_Result = s_ALU_Result;
   assign o_ALU_Flags = {s_Flag_Negative, s_Flag_Zero, s_Flag_Carry, s_Flag_Overflow};

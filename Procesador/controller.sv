@@ -16,8 +16,8 @@ module controller (
 
   // Decoder instantiation
   decoder dec (
-    .Instr(Instr),
-    .FlagW(FlagW),
+    .Op(Instr),
+    .Funct(FlagW),
     .PCS(PCS),
     .RegW(RegW),
     .MemW(MemW),
@@ -32,7 +32,7 @@ module controller (
   condlogic cl (
     .clk(clk),
     .reset(reset),
-    .Instr(Instr),
+    .Cond(Instr),
     .ALUFlags(ALUFlags),
     .FlagW(FlagW),
     .PCS(PCS),

@@ -5,6 +5,7 @@ module Procesador_Taller(
 );
 
   logic [31:0] PC, Instr, ReadData;
+  logic [31:0] ALUResult;
 
   // Instantiate processor and memories
   arm arm_inst (
@@ -13,14 +14,14 @@ module Procesador_Taller(
     .PC(PC),
     .Instr(Instr),
     .MemWrite(MemWrite),
-    .DataAdr(DataAdr),
+    .ALUResult(ALUResult),
     .WriteData(WriteData),
     .ReadData(ReadData)
   );
 
   imem imem_inst (
-    .PC(PC),
-    .Instr(Instr)
+    .a(PC),
+    .rd(Instr)
   );
 
   dmem dmem_inst (
@@ -32,3 +33,4 @@ module Procesador_Taller(
   );
 
 endmodule
+
