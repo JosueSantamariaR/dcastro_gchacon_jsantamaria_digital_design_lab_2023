@@ -1,0 +1,21 @@
+DEPTH = 16;  -- Número de direcciones en la memoria
+WIDTH = 32;  -- Ancho de cada palabra en bits
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+BEGIN
+0:e3a00000;
+1: e3a03000;
+2: e3a0400a;
+3: e3a06001;
+4: e5905000;
+5: e0465005;
+6: e5805000;
+7: e2800004;
+8: e2833001;
+9: e1530004;
+A: bafffff8;
+[B..F]  :   0;
+ 
+END;

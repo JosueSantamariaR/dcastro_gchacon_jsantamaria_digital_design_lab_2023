@@ -1,0 +1,6 @@
+Warning (10273): Verilog HDL warning at ALU_m1.sv(61): extended using "x" or "z" File: C:/Users/gabos/Desktop/JAguero_IGrane_MGonzales-Digital_Desing_Workshop-2023-master/Proyecto/ALU_m1.sv Line: 61
+Warning (10273): Verilog HDL warning at ALU_m1.sv(67): extended using "x" or "z" File: C:/Users/gabos/Desktop/JAguero_IGrane_MGonzales-Digital_Desing_Workshop-2023-master/Proyecto/ALU_m1.sv Line: 67
+Warning (10273): Verilog HDL warning at decoder.sv(32): extended using "x" or "z" File: C:/Users/gabos/Desktop/JAguero_IGrane_MGonzales-Digital_Desing_Workshop-2023-master/Proyecto/decoder.sv Line: 32
+Warning (10273): Verilog HDL warning at decoder.sv(58): extended using "x" or "z" File: C:/Users/gabos/Desktop/JAguero_IGrane_MGonzales-Digital_Desing_Workshop-2023-master/Proyecto/decoder.sv Line: 58
+Warning (10273): Verilog HDL warning at extend.sv(22): extended using "x" or "z" File: C:/Users/gabos/Desktop/JAguero_IGrane_MGonzales-Digital_Desing_Workshop-2023-master/Proyecto/extend.sv Line: 22
+Warning (10268): Verilog HDL information at VGA_Controller.sv(45): always construct contains both blocking and non-blocking assignments File: C:/Users/gabos/Desktop/JAguero_IGrane_MGonzales-Digital_Desing_Workshop-2023-master/Proyecto/VGA_Controller.sv Line: 45
