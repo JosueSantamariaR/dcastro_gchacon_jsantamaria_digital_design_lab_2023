@@ -1,0 +1,4 @@
+Warning (10273): Verilog HDL warning at Decoder.sv(32): extended using "x" or "z" File: C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Decoder.sv Line: 32
+Warning (10273): Verilog HDL warning at Decoder.sv(58): extended using "x" or "z" File: C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Decoder.sv Line: 58
+Warning (10273): Verilog HDL warning at Extend.sv(22): extended using "x" or "z" File: C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Extend.sv Line: 22
+Warning (10273): Verilog HDL warning at ALU_m2.sv(31): extended using "x" or "z" File: C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ALU_m2.sv Line: 31

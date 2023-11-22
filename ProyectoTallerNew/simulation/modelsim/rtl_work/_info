@@ -1,0 +1,625 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/simulation/modelsim
+vAdder
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1700612297
+!i10b 1
+!s100 VS3L1Zlmm=4@^CS4Ic4hg3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I58mEGz8915MF8Nd9ZXiJ01
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1700609992
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Adder.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Adder.sv
+!i122 16
+L0 1 8
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1700612297.000000
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Adder.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew
+Z9 tCvgOpt 0
+n@adder
+vALU_m2
+R1
+Z10 !s110 1700612298
+!i10b 1
+!s100 l:0h;Pj2>G_FcA37ZO7^W0
+R3
+I<oU]z04]f2b7IQC=YZj@o2
+R4
+S1
+R0
+w1700610230
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ALU_m2.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ALU_m2.sv
+!i122 20
+L0 1 40
+R5
+r1
+!s85 0
+31
+Z11 !s108 1700612298.000000
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ALU_m2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ALU_m2.sv|
+!i113 1
+R7
+R8
+R9
+n@a@l@u_m2
+vARMv4
+R1
+Z12 !s110 1700612293
+!i10b 1
+!s100 7:7z?6>>53K<]gdiO6;HT1
+R3
+I<>4aZBJLzC[7lf[Ezg02[3
+R4
+S1
+R0
+w1700609194
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ARMv4.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ARMv4.sv
+!i122 4
+Z13 L0 1 23
+R5
+r1
+!s85 0
+31
+Z14 !s108 1700612293.000000
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ARMv4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ARMv4.sv|
+!i113 1
+R7
+R8
+R9
+n@a@r@mv4
+vCondcheck
+R1
+Z15 !s110 1700612296
+!i10b 1
+!s100 @M:2YgSGbRWgdG`MH^bDL1
+R3
+If:X<KLiQGl2]H:M;z78061
+R4
+S1
+R0
+w1700609896
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Condcheck.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Condcheck.sv
+!i122 13
+L0 1 31
+R5
+r1
+!s85 0
+31
+Z16 !s108 1700612296.000000
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Condcheck.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Condcheck.sv|
+!i113 1
+R7
+R8
+R9
+n@condcheck
+vCondlogic
+R1
+Z17 !s110 1700612295
+!i10b 1
+!s100 ==aTISEoe8Vz`OeX5C1D33
+R3
+ISnXMf@1k@5g;fVbd1L?g20
+R4
+S1
+R0
+w1700609887
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Condlogic.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Condlogic.sv
+!i122 12
+L0 1 22
+R5
+r1
+!s85 0
+31
+Z18 !s108 1700612295.000000
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Condlogic.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Condlogic.sv|
+!i113 1
+R7
+R8
+R9
+n@condlogic
+vController
+R1
+R17
+!i10b 1
+!s100 nb<6YeUZL3>UIn_4z::Xo2
+R3
+Imd>F;`4CmE8GboCW^dI?b2
+R4
+S1
+R0
+w1700609836
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Controller.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Controller.sv
+!i122 11
+R13
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Controller.sv|
+!i113 1
+R7
+R8
+R9
+n@controller
+vDatapath
+R1
+R17
+!i10b 1
+!s100 Lo<Mi34`bn4jB4k8]E1Lf3
+R3
+In4W>A@?@V9KUc:2ag<[cH3
+R4
+S1
+R0
+w1700610324
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Datapath.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Datapath.sv
+!i122 10
+L0 1 42
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Datapath.sv|
+!i113 1
+R7
+R8
+R9
+n@datapath
+vDecoder
+R1
+R15
+!i10b 1
+!s100 AQniImC8?^>ZSC8HkhTMF3
+R3
+Icih^R<WYzeL5;=V_R7?Bj1
+R4
+S1
+R0
+w1700609958
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Decoder.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Decoder.sv
+!i122 14
+L0 1 71
+R5
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Decoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Decoder.sv|
+!i113 1
+R7
+R8
+R9
+n@decoder
+vExtend
+R1
+R2
+!i10b 1
+!s100 QK7zjBTIlLYbn=3h<hlKc2
+R3
+IfY`[X8KnzQ>HZF4=oN=O61
+R4
+S1
+R0
+w1700610189
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Extend.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Extend.sv
+!i122 19
+L0 1 32
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Extend.sv|
+!i113 1
+R7
+R8
+R9
+n@extend
+vMultiplexer
+R1
+Z19 !s110 1700612294
+!i10b 1
+!s100 K3V@mP0=BkIe0GH[=o42^3
+R3
+IJAK1m<kCN7C8cN=OC3@oF3
+R4
+S1
+R0
+w1700609347
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer.sv
+!i122 7
+Z20 L0 1 19
+R5
+r1
+!s85 0
+31
+Z21 !s108 1700612294.000000
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer.sv|
+!i113 1
+R7
+R8
+R9
+n@multiplexer
+vMultiplexer_2
+R1
+R2
+!i10b 1
+!s100 0n5Wh[RGPiJ5^BW<L<4TK1
+R3
+IFi?3<l1FYb;8aR^G8Q[AV1
+R4
+S1
+R0
+w1700610006
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_2.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_2.sv
+!i122 17
+L0 1 10
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_2.sv|
+!i113 1
+R7
+R8
+R9
+n@multiplexer_2
+vMultiplexer_3
+R1
+R17
+!i10b 1
+!s100 [LT7nPdOAecdmo1Ail1L40
+R3
+IbJmE;IALDXdnBo6e8CImG3
+R4
+S1
+R0
+w1700609363
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_3.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_3.sv
+!i122 8
+L0 1 27
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_3.sv|
+!i113 1
+R7
+R8
+R9
+n@multiplexer_3
+vMultiplexer_4
+R1
+R17
+!i10b 1
+!s100 Z8mb<]<aJz<K>cMng77T@0
+R3
+Iihl0e1gY8Vjk@dhU;H^D@1
+R4
+S1
+R0
+w1700609385
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_4.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_4.sv
+!i122 9
+Z22 L0 1 12
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Multiplexer_4.sv|
+!i113 1
+R7
+R8
+R9
+n@multiplexer_4
+vProcesadorTaller
+R1
+R12
+!i10b 1
+!s100 L<AEe@ZG?AJhZP38i`mGh2
+R3
+IDEz664Ce3OlWo9kX4QMbE0
+R4
+S1
+R0
+w1700609197
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ProcesadorTaller.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ProcesadorTaller.sv
+!i122 3
+L0 1 52
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ProcesadorTaller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ProcesadorTaller.sv|
+!i113 1
+R7
+R8
+R9
+n@procesador@taller
+vRAM_Image
+R12
+!i10b 1
+!s100 zd;fll;Oi_MjNIVR@@11G1
+R3
+I;l4^FJ7B7oVlM3A<]:B[U2
+R4
+R0
+w1700609666
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/RAM_Image.v
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/RAM_Image.v
+!i122 2
+L0 40 65
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/RAM_Image.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/RAM_Image.v|
+!i113 1
+Z23 o-vlog01compat -work work
+Z24 !s92 -vlog01compat -work work +incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew
+R9
+n@r@a@m_@image
+vRegfile
+R1
+R2
+!i10b 1
+!s100 fgKG9NLMPn`e:1Ol8BZ]@3
+R3
+IOLTF8Dn=DP@7VX_R704jC3
+R4
+S1
+R0
+w1700610029
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Regfile.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Regfile.sv
+!i122 18
+L0 1 16
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Regfile.sv|
+!i113 1
+R7
+R8
+R9
+n@regfile
+vReset_FlipFlop
+R1
+R19
+!i10b 1
+!s100 zlLK`c^X><Vm^giKm`hBc3
+R3
+Ib3^hKLQmOWFVC]oS`S[D^0
+R4
+S1
+R0
+w1700609238
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Reset_FlipFlop.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Reset_FlipFlop.sv
+!i122 6
+R20
+R5
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Reset_FlipFlop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Reset_FlipFlop.sv|
+!i113 1
+R7
+R8
+R9
+n@reset_@flip@flop
+vROM
+R12
+!i10b 1
+!s100 n5QeRJR2zjz4lIPmg<_@10
+R3
+IYJX1Y5eUm8<ZRJ;JibemJ0
+R4
+R0
+w1700609593
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ROM.v
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ROM.v
+!i122 1
+Z25 L0 40 61
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ROM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ROM.v|
+!i113 1
+R23
+R24
+R9
+n@r@o@m
+vROM_Instruction
+!s110 1700612292
+!i10b 1
+!s100 `LL5RW9eK3mjHN9FgcAVE1
+R3
+I_a__nFi5fJen`WUSoHNP^2
+R4
+R0
+w1700609523
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ROM_Instruction.v
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ROM_Instruction.v
+!i122 0
+R25
+R5
+r1
+!s85 0
+31
+!s108 1700612292.000000
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ROM_Instruction.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/ROM_Instruction.v|
+!i113 1
+R23
+R24
+R9
+n@r@o@m_@instruction
+vtestbench
+R1
+R10
+!i10b 1
+!s100 J[[lAQM^SGQg`1IHJ;bkT0
+R3
+Ih5n1cLXY2]FhnC6Ph115^1
+R4
+S1
+R0
+w1700612203
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/testbench.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/testbench.sv
+!i122 22
+L0 2 40
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/testbench.sv|
+!i113 1
+R7
+R8
+R9
+vVGA_Controller
+R1
+R10
+!i10b 1
+!s100 Gc@JcGUHFn9fVj?mlN[iS1
+R3
+I;;n0G>0^2fWcj;3gQMCl;0
+R4
+S1
+R0
+w1700610249
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/VGA_Controller.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/VGA_Controller.sv
+!i122 21
+L0 1 66
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/VGA_Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/VGA_Controller.sv|
+!i113 1
+R7
+R8
+R9
+n@v@g@a_@controller
+vWidth_FlipFlop
+R1
+R2
+!i10b 1
+!s100 ;>2Uad>BiIPTf]@gK[QAX1
+R3
+IbJAQOamES2WA247kG?D:D3
+R4
+S1
+R0
+w1700609975
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Width_FlipFlop.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Width_FlipFlop.sv
+!i122 15
+R22
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Width_FlipFlop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/Width_FlipFlop.sv|
+!i113 1
+R7
+R8
+R9
+n@width_@flip@flop
+vWidthEN_FlipFlop
+R1
+R19
+!i10b 1
+!s100 WT_7?Ei_i;mF;2LALcC=m3
+R3
+In_Y0PhJDlzjNMP_z1Xn<L1
+R4
+S1
+R0
+w1700609216
+8C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/WidthEN_FlipFlop.sv
+FC:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/WidthEN_FlipFlop.sv
+!i122 5
+R22
+R5
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/WidthEN_FlipFlop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew|C:/Users/dcast/OneDrive/Escritorio/ProyectoTallerNew/WidthEN_FlipFlop.sv|
+!i113 1
+R7
+R8
+R9
+n@width@e@n_@flip@flop
